@@ -140,3 +140,20 @@ function readNumber() {
 }
 
 console.log(readNumber());
+
+/* TASK 3
+An occasional infinite loop
+importance: 4
+This loop is infinite. It never ends. Why?
+
+let i = 0;
+while (i != 10) {
+  i += 0.2;
+}
+ */
+
+let i = 0;
+while (i < 11) {
+  i += 0.2;
+  i > 9.8 && i < 10.2 ? console.log(i) : null;
+}
