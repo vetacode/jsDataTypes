@@ -116,3 +116,27 @@ How to round 6.35 the right way?
 
 console.log((6.35 * 10).toFixed(20));
 console.log(Math.round(6.35 * 10) / 10);
+
+/*TASK 2
+Repeat until the input is a number
+importance: 5
+Create a function readNumber which prompts for a number until the visitor enters a valid numeric value.
+
+The resulting value must be returned as a number.
+
+The visitor can also stop the process by entering an empty line or pressing “CANCEL”. In that case, the function should return null.
+*/
+
+function readNumber() {
+  let validNum;
+
+  do {
+    validNum = 100;
+  } while (!isFinite(validNum));
+
+  if (validNum == null || validNum == '') return null;
+
+  return +validNum;
+}
+
+console.log(readNumber());
