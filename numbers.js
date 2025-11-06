@@ -63,3 +63,9 @@ console.log(typeof sum); //number
 
 sum = sum.toFixed(2);
 console.log(typeof sum); //string
+
+//Funny thing
+// Hello! I'm a self-increasing number!
+console.log(9999999999999999); // shows 10000000000000000
+
+console.log(0 === -0); //true
