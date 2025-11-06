@@ -72,4 +72,18 @@ console.log(0 === -0); //true
 
 //Infinite and NaN
 //NaN is unique
-alert(NaN === NaN); // false
+console.log(NaN === NaN); // false
+
+//ParseInt and ParseFolat
+//function parseInt returns an integer, whilst parseFloat will return a floating-point number:
+console.log(parseInt('100px')); // 100
+console.log(parseFloat('12.5em')); // 12.5
+
+console.log(parseInt('12.3')); // 12, only the integer part is returned
+console.log(parseFloat('12.3.4')); // 12.3, the second point stops the reading
+console.log(parseInt('a123')); // NaN, the first symbol stops the process
+
+console.log(parseInt('0xff', 16)); // 255
+console.log(parseInt('ff', 16)); // 255, without 0x also works
+
+console.log(parseInt('2n9c', 36)); // 123456
