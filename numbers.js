@@ -19,21 +19,21 @@ let mcs = 1e-6; // five zeroes to the left from 1
 
 //Hexadecimal 0x and Octal numeral system 0b and 0o
 
-alert(0xff); // 255
-alert(0xff); // 255 (the same, case doesn't matter)
+console.log(0xff); // 255
+console.log(0xff); // 255 (the same, case doesn't matter)
 
 let a = 0b11111111; // binary form of 255
 let b = 0o377; // octal form of 255
 
-alert(a == b); // true, the same number 255 at both sides
+console.log(a == b); // true, the same number 255 at both sides
 
 //toString(Base)
-let num = 255;
+let angka = 255;
 
-alert(num.toString(16)); // ff
-alert(num.toString(2)); // 11111111
+console.log(angka.toString(16)); // ff
+console.log(angka.toString(2)); // 11111111
 
-alert((123456).toString(36)); // 2n9c
+console.log((123456).toString(36)); // 2n9c
 
 /*
 Two dots to call a method
@@ -42,3 +42,17 @@ Please note that two dots in 123456..toString(36) is not a typo. If we want to c
 If we placed a single dot: 123456.toString(36), then there would be an error, because JavaScript syntax implies the decimal part after the first dot. And if we place one more dot, then JavaScript knows that the decimal part is empty and now uses the method.
 
 Also could write (123456).toString(36).*/
+
+//Rounding
+
+let num = 1.23456;
+console.log(Math.round(num * 100) / 100); // 1.23456 -> 123.456 -> 123 -> 1.23
+
+let num1 = 12.34;
+console.log(num1.toFixed(1)); // "12.3"
+
+let num2 = 12.36;
+console.log(num2.toFixed(1)); // "12.4"
+
+let num3 = 12.34;
+console.log(num3.toFixed(5)); // "12.34000", added zeroes to make exactly 5 digits
