@@ -16,3 +16,8 @@ let mcs = 1e-6; // five zeroes to the left from 1
 
 // an example with a bigger number
 1234e-2 === 1234 / 100; // 12.34, decimal point moves 2 times
+
+//Hexadecimal 0x and Octal numeral system 0b and 0o
+
+alert(0xff); // 255
+alert(0xff); // 255 (the same, case doesn't matter)
