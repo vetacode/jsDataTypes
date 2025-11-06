@@ -87,3 +87,15 @@ console.log(parseInt('0xff', 16)); // 255
 console.log(parseInt('ff', 16)); // 255, without 0x also works
 
 console.log(parseInt('2n9c', 36)); // 123456
+
+//Math.random Math.max Math.min() Math.pow(n, power)
+
+let numbre = '145';
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+
+console.log(Math.max(20, 0, -2, -10, 30, 50));
+console.log(Math.min(20, 0, -2, -10, 30, 50));
+console.log(Math.min());
+console.log(Math.pow(3, 2));
