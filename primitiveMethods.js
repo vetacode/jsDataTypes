@@ -16,3 +16,26 @@ if (zero) {
 
 let num = Number('123'); // convert a string to number
 console.log(typeof num);
+
+//null/undefined have no methods
+// console.log(null.test); // error
+
+/*Task
+Can I add a string property?
+importance: 5
+Consider the following code:
+
+let str = "Hello";
+
+str.test = 5;
+
+console.log(str.test);
+What do you think, will it work? What will be shown?
+*/
+let str2 = 'Hello';
+
+str.test = 5; // (*)
+console.log(str2.test);
+
+//This example clearly shows that primitives are not objects.
+// They can’t store additional data.
