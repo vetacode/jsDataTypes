@@ -99,3 +99,20 @@ console.log(Math.max(20, 0, -2, -10, 30, 50));
 console.log(Math.min(20, 0, -2, -10, 30, 50));
 console.log(Math.min());
 console.log(Math.pow(3, 2));
+
+/* TASK 1
+Why 6.35.toFixed(1) == 6.3?
+importance: 4
+According to the documentation Math.round and toFixed both round to the nearest number: 0..4 lead down while 5..9 lead up.
+
+For instance:
+
+alert( 1.35.toFixed(1) ); // 1.4
+In the similar example below, why is 6.35 rounded to 6.3, not 6.4?
+
+alert( 6.35.toFixed(1) ); // 6.3
+How to round 6.35 the right way?
+*/
+
+console.log((6.35 * 10).toFixed(20));
+console.log(Math.round(6.35 * 10) / 10);
