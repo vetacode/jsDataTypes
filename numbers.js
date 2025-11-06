@@ -44,7 +44,6 @@ If we placed a single dot: 123456.toString(36), then there would be an error, be
 Also could write (123456).toString(36).*/
 
 //Rounding
-
 let num = 1.23456;
 console.log(Math.round(num * 100) / 100); // 1.23456 -> 123.456 -> 123 -> 1.23
 
@@ -56,3 +55,11 @@ console.log(num2.toFixed(1)); // "12.4"
 
 let num3 = 12.34;
 console.log(num3.toFixed(5)); // "12.34000", added zeroes to make exactly 5 digits
+
+//Decimal solution: using toFixed
+let sum = 0.1 + 0.2;
+console.log(+sum.toFixed(2)); // 0.3
+console.log(typeof sum); //number
+
+sum = sum.toFixed(2);
+console.log(typeof sum); //string
