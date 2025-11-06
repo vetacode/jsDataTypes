@@ -69,3 +69,7 @@ console.log(typeof sum); //string
 console.log(9999999999999999); // shows 10000000000000000
 
 console.log(0 === -0); //true
+
+//Infinite and NaN
+//NaN is unique
+alert(NaN === NaN); // false
