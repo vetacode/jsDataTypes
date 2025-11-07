@@ -130,6 +130,14 @@ let matrix = [
   [7, 8, 9],
 ];
 
-alert(matrix[0][1]); // 2, the second value of the first inner array
+console.log(matrix[0][1]); // 2, the second value of the first inner array
 
 //toString
+let arr5 = [1, 2, 3];
+
+console.log(arr5); // 1,2,3
+console.log(String(arr5) === '1,2,3'); // true
+
+console.log([] + 1); // "1"
+console.log([1] + 1); // "11"
+console.log([1, 2] + 1); // "1,21"
