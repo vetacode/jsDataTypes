@@ -95,3 +95,24 @@ for (let key in consoles) {
 }
 //NOTES: using for..in loop will have a problem with array-like objects, which will iterate on all of non-numeric object keys/props
 //ONLY use for..in loops for generic objects, not Arrays
+
+//LENGTH: is not the count of values in the array, BUT it is (max-index + 1)
+let buah = [];
+buah[123] = 'Apple'; //tambahkan 'Apple' pada index ke 123 di array buah
+
+console.log(buah.length); // 124
+
+console.log(buah.unshift('Pisang'));
+console.log(buah); //['Pisang', undefined, ...,....,'Apple']
+
+let arrNum = [1, 2, 3, 4, 5];
+
+arrNum.length = 2; // truncate to 2 elements
+console.log(arrNum); // [1, 2]
+
+arrNum.length = 5; // return length back
+console.log(arrNum[3]); // undefined: the values do not return
+
+//Simplest way to clear Array:
+arrNum.length = 0;
+console.log(arrNum);
