@@ -95,7 +95,7 @@ console.log('Widget'.startsWith('Wid')); // true, "Widget" starts with "Wid"
 console.log('Widget'.endsWith('get')); // true, "Widget" ends with "get"
 
 //Getting a substring
-// Syntax: str.slice(start [, end]) ==> return the part of string from Start to (not including) End.
+// Syntax: str.slice(start [, end]) ==> return the part of string from Start to (not including) End. For practical use it’s enough to remember only slice.
 let str4 = 'stringify';
 console.log(str4.slice(0, 5)); // 'strin', the substring from 0 to 5 (not including 5)
 console.log(str4.slice(0, 1)); // 's', from 0 to 1, but not including 1, so only character at 0
@@ -117,3 +117,5 @@ console.log(str4.slice(2, 6)); // "ring" (the same)
 console.log(str4.slice(6, 2)); // "" (an empty string)
 
 //str.substr(start [, length])
+console.log(str4.substr(2, 4)); // 'ring', from the 2nd position get 4 characters
+console.log(str4.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
