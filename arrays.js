@@ -116,3 +116,11 @@ console.log(arrNum[3]); // undefined: the values do not return
 //Simplest way to clear Array:
 arrNum.length = 0;
 console.log(arrNum);
+
+//NEW ARRAY
+let array = new Array('Apple', 'Pear', 'etc');
+let array2 = new Array(2); // will it create an array of [2] ?
+
+console.log(array2[0]); // undefined! no elements.
+
+console.log(array2.length); // length 2
