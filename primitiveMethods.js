@@ -34,7 +34,7 @@ What do you think, will it work? What will be shown?
 */
 let str2 = 'Hello';
 
-str.test = 5; // (*)
+str2.test = 5; // (*)
 console.log(str2.test);
 
 //This example clearly shows that primitives are not objects.
