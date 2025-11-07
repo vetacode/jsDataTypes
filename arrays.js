@@ -30,4 +30,11 @@ console.log(arr3[1].name); // John
 // get the function at index 3 and run it
 console.log(arr3[3]());
 
-//Get last elements with “at”
+//Get last elements with “at”. Syntax: arr.at(i)
+console.log(fruits);
+console.log(fruits[fruits.length - 1]);
+
+// same as fruits[fruits.length-1]
+console.log(fruits.at(-1));
+
+//Methods pop/push, shift/unshift
