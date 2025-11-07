@@ -27,3 +27,8 @@ console.log(str.at(-1));
 
 //String length
 console.log(`My\n`.length); // 3
+console.log(`mobile\n`.length); //7. \n is a one special character that will be counted as one
+
+let car = 'sport';
+console.log(car[4]);
+console.log(car.at(-1));
