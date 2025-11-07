@@ -123,3 +123,19 @@ console.log(str4.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
 //other useful methods on strings
 // str.trim() – removes (“trims”) spaces from the beginning and end of the string.
 // str.repeat(n) – repeats the string n times.
+
+//TASK 1
+/**
+ * Uppercase the first character
+importance: 5
+Write a function ucFirst(str) that returns the string str with the uppercased first character, for instance:
+
+ucFirst("john") == "John";
+ */
+
+function ucFirst(str) {
+  let newStr = str[0].toUpperCase() + str.slice(1);
+  return newStr;
+}
+
+console.log(ucFirst('john'));
