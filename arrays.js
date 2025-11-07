@@ -64,3 +64,14 @@ fruits2.push('Orange', 'Peach');
 fruits2.unshift('Pineapple', 'Lemon');
 // ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
 console.log(fruits2);
+
+//Array Internals
+//Arrays is included in the Object's data types where there are only 8 data types in JS. But it is a special Object, with indexing and length traits
+//For instance, it is copied by reference:
+let fruits3 = ['Banana'];
+
+let arr4 = fruits3; // copy by reference (two variables reference the same array)
+console.log(arr4 === fruits3); // true
+
+arr4.push('Pear'); // modify the array by reference
+console.log(fruits3); // Banana, Pear - 2 items now
