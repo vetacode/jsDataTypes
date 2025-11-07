@@ -72,6 +72,6 @@ while (true) {
 
 //OR simplest
 let position = -1;
-while ((position = letter.indexOf(target, position + 1) != -1)) {
+while ((position = letter.indexOf(target, position + 1)) != -1) {
   console.log(position);
 }
