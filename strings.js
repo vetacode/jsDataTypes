@@ -87,3 +87,8 @@ if (str3.indexOf('Widget')) {
 if (str3.indexOf('Widget') != -1) {
   console.log('We found it'); // works now!
 }
+
+//includes, startsWith, endsWith
+console.log('Widget with id'.includes('Widget')); // true
+
+console.log('Hello'.includes('Bye')); // false
