@@ -50,3 +50,23 @@ console.log(stat.indexOf('al'));
 console.log(stat.indexOf('always'));
 console.log(stat.indexOf('alwais'));
 console.log(stat.indexOf('q'));
+
+//the second parameter is the initital position
+let gadget = 'Widget with id';
+
+console.log(gadget.indexOf('id')); // 1. "..idget with.."
+console.log(gadget.indexOf('id', 2)); // 12
+
+//find all substring occurances
+let letter = 'As sly as a fox, as strong as an ox';
+
+let target = 'as'; // let's look for it
+
+let pos = 0;
+while (true) {
+  let foundPos = letter.indexOf(target, pos);
+  if (foundPos == -1) break;
+
+  console.log(`Found at ${foundPos}`);
+  pos = foundPos + 1; // continue the search from the next position
+}
