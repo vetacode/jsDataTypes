@@ -24,3 +24,6 @@ console.log(str.at(0)); // H
 // the last character
 console.log(str[str.length - 1]); // o
 console.log(str.at(-1));
+
+//String length
+console.log(`My\n`.length); // 3
