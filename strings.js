@@ -75,3 +75,15 @@ let position = -1;
 while ((position = letter.indexOf(target, position + 1)) != -1) {
   console.log(position);
 }
+
+//Apply with if
+let str3 = 'Widget with id';
+
+if (str3.indexOf('Widget')) {
+  //if returns 0 then it return false, & not continue
+  console.log('We found it'); // doesn't work!
+}
+
+if (str3.indexOf('Widget') != -1) {
+  console.log('We found it'); // works now!
+}
