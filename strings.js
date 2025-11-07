@@ -32,3 +32,6 @@ console.log(`mobile\n`.length); //7. \n is a one special character that will be 
 let car = 'sport';
 console.log(car[4]);
 console.log(car.at(-1));
+
+//changing the case
+console.log('Interface'[0].toLowerCase()); // 'i'
