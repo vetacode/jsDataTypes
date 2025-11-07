@@ -139,3 +139,48 @@ function ucFirst(str) {
 }
 
 console.log(ucFirst('john'));
+
+/** TASK 2
+ * Check for spam
+importance: 5
+Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
+
+The function must be case-insensitive:
+
+checkSpam('buy ViAgRA now') == true
+checkSpam('free xxxxx') == true
+checkSpam("innocent rabbit") == false
+ */
+
+function checkSpam(str) {
+  let newStr = str.toLowerCase();
+
+  if (newStr.includes('viagra') || newStr.includes('xxx')) {
+    return true;
+  }
+  return false;
+}
+
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam('innocent rabbit'));
+
+//more simple code
+function checkSpam2(str) {
+  let newStr = str.toLowerCase();
+  return newStr.includes('viagra') || newStr.includes('xxx') ? true : false;
+}
+
+console.log(checkSpam2('buy ViAgRA now'));
+console.log(checkSpam2('free xxxxx'));
+console.log(checkSpam2('innocent rabbit'));
+
+//even more simple code :)
+function checkSpam3(str) {
+  let newStr = str.toLowerCase();
+  return newStr.includes('viagra') || newStr.includes('xxx');
+}
+
+console.log(checkSpam3('buy ViAgRA now'));
+console.log(checkSpam3('free xxxxx'));
+console.log(checkSpam3('innocent rabbit'));
