@@ -120,7 +120,16 @@ console.log(arrNum);
 //NEW ARRAY
 let array = new Array('Apple', 'Pear', 'etc');
 let array2 = new Array(2); // will it create an array of [2] ?
-
 console.log(array2[0]); // undefined! no elements.
-
 console.log(array2.length); // length 2
+
+//MULTIDIMENSIONAL ARRAY
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+alert(matrix[0][1]); // 2, the second value of the first inner array
+
+//toString
