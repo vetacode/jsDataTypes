@@ -90,5 +90,30 @@ if (str3.indexOf('Widget') != -1) {
 
 //includes, startsWith, endsWith
 console.log('Widget with id'.includes('Widget')); // true
-
 console.log('Hello'.includes('Bye')); // false
+console.log('Widget'.startsWith('Wid')); // true, "Widget" starts with "Wid"
+console.log('Widget'.endsWith('get')); // true, "Widget" ends with "get"
+
+//Getting a substring
+// Syntax: str.slice(start [, end]) ==> return the part of string from Start to (not including) End.
+let str4 = 'stringify';
+console.log(str4.slice(0, 5)); // 'strin', the substring from 0 to 5 (not including 5)
+console.log(str4.slice(0, 1)); // 's', from 0 to 1, but not including 1, so only character at 0
+
+console.log(str4.slice(2)); // 'ringify', from the 2nd position till the end
+
+// start at the 4th position from the right, end at the 1st from the right
+console.log(str4.slice(-4, -1)); // 'gif'
+
+// str.substring(start [, end])
+// similar with slice but it possible start greater than end, with simply swap it
+
+// these are same for substring
+console.log(str4.substring(2, 6)); // "ring"
+console.log(str4.substring(6, 2)); // "ring"
+
+// ...but not for slice:
+console.log(str4.slice(2, 6)); // "ring" (the same)
+console.log(str4.slice(6, 2)); // "" (an empty string)
+
+//str.substr(start [, length])
