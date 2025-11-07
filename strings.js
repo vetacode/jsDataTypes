@@ -35,3 +35,18 @@ console.log(car.at(-1));
 
 //changing the case
 console.log('Interface'[0].toLowerCase()); // 'i'
+
+//str.indexOf
+//syntax: str.indexOf(substr, pos).
+let stat = `Today is amazing as always`;
+console.log(stat.indexOf('T'));
+console.log(stat.indexOf('o'));
+console.log(stat.indexOf('d'));
+console.log(stat.indexOf('a'));
+console.log(stat.indexOf('y'));
+console.log(stat.indexOf('is'));
+console.log(stat.indexOf('as'));
+console.log(stat.indexOf('al'));
+console.log(stat.indexOf('always'));
+console.log(stat.indexOf('alwais'));
+console.log(stat.indexOf('q'));
