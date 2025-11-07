@@ -119,3 +119,7 @@ console.log(str4.slice(6, 2)); // "" (an empty string)
 //str.substr(start [, length])
 console.log(str4.substr(2, 4)); // 'ring', from the 2nd position get 4 characters
 console.log(str4.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
+
+//other useful methods on strings
+// str.trim() – removes (“trims”) spaces from the beginning and end of the string.
+// str.repeat(n) – repeats the string n times.
