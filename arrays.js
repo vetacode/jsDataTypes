@@ -75,3 +75,23 @@ console.log(arr4 === fruits3); // true
 
 arr4.push('Pear'); // modify the array by reference
 console.log(fruits3); // Banana, Pear - 2 items now
+
+//LOOPS on Array is similar to Object
+//old method:
+let consoles = ['ps5', 'xbox', 'nintendo', 'sega'];
+
+for (let i = 0; i < consoles.length; i++) {
+  console.log(consoles[i]);
+}
+
+//Cool ways: for..of
+for (let console of consoles) {
+  console.log(console);
+}
+
+//Using for..in: (NOT RECOMMENDED FOR ARRAYS)
+for (let key in consoles) {
+  console.log(consoles[key]);
+}
+//NOTES: using for..in loop will have a problem with array-like objects, which will iterate on all of non-numeric object keys/props
+//ONLY use for..in loops for generic objects, not Arrays
