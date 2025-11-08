@@ -85,9 +85,9 @@ for (let i = 0; i < consoles.length; i++) {
 }
 
 //Cool ways: for..of
-for (let console of consoles) {
-  console.log(console);
-}
+// for (let console of consoles) {
+//   console.log(console);
+// }
 
 //Using for..in: (NOT RECOMMENDED FOR ARRAYS)
 for (let key in consoles) {
@@ -183,4 +183,29 @@ musicGenre.push('Rock-n-Roll');
 // delete musicGenre[1];
 // musicGenre[1] = 'Classics';
 musicGenre[Math.floor((musicGenre.length - 1) / 2)] = 'Classics';
+musicGenre.shift();
+musicGenre.unshift('Rap', 'Reggae');
 console.log(musicGenre);
+
+/** TASK 3
+ * Calling in an array context
+importance: 5
+What is the result? Why?
+
+let arr = ["a", "b"];
+
+arr.push(function() {
+  alert( this );
+});
+
+arr[2](); // ?
+ */
+
+let arrayy = ['a', 'b'];
+
+arrayy.push(function () {
+  return this;
+});
+
+let x = arrayy[2]();
+console.log(x);
