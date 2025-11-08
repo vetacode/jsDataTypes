@@ -1,0 +1,34 @@
+<!-- TASK 4 * Sum input numbers importance: 4 Write the function sumInput() that:
+Asks the user for values using prompt and stores the values in the array.
+Finishes asking when the user enters a non-numeric value, an empty string, or
+presses “Cancel”. Calculates and returns the sum of array items. P.S. A zero 0
+is a valid number, please don’t stop the input on zero. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sumInput() {
+        let num = [];
+        while (true) {
+          let val = prompt('Please input a number:', '');
+          if (val === '' || val === null || !isFinite(val)) break;
+
+          num.push(+val);
+        }
+        let sum = 0;
+        for (let number of num) {
+          sum += number;
+        }
+        return sum;
+      }
+
+      alert('The Sum total of numbers inputted is:' + ' ' + sumInput());
+    </script>
+  </body>
+</html>
