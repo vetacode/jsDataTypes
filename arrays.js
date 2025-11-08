@@ -234,12 +234,18 @@ Please try to think of a fast solution: O(n2) or even O(n) if you can.
  */
 
 let arrei = [1, -2, 3, 4, -9, 6];
-let currentSum = 0;
 let maxSum = 0;
 
-function getMaxSubSum(arrei) {
-  for (let currentSum = 0; )
-
+function getMaxSubSum(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let currentSum = 0;
+    for (let j = i; j < arr.length; j++) {
+      currentSum += arr[j];
+      maxSum = Math.max(maxSum, currentSum);
+    }
+  }
+  return maxSum;
 }
 
-console.log(arrei);
+getMaxSubSum(arrei);
+console.log(maxSum);
