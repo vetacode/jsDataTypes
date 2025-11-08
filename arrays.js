@@ -148,3 +148,12 @@ console.log([0] == [0]); // false
 
 console.log(0 == []); // true
 console.log('0' == []); // false
+
+//TASK1. Array copied by reference
+let buah2 = ['apel', 'mangga', 'jambu', 'duren'];
+
+let fruits5 = buah2;
+
+fruits5.push('alpukat');
+console.log(fruits5);
+console.log(buah2);
