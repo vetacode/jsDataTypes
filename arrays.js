@@ -157,3 +157,30 @@ let fruits5 = buah2;
 fruits5.push('alpukat');
 console.log(fruits5);
 console.log(buah2);
+
+/**TASK 2
+ * Array operations.
+importance: 5
+Let’s try 5 array operations.
+
+Create an array styles with items “Jazz” and “Blues”.
+Append “Rock-n-Roll” to the end.
+Replace the value in the middle with “Classics”. Your code for finding the middle value should work for any arrays with odd length.
+Strip off the first value of the array and show it.
+Prepend Rap and Reggae to the array.
+The array in the process:
+
+Jazz, Blues
+Jazz, Blues, Rock-n-Roll
+Jazz, Classics, Rock-n-Roll
+Classics, Rock-n-Roll
+Rap, Reggae, Classics, Rock-n-Roll
+ */
+
+let musicGenre = ['Jazz', 'Blues'];
+
+musicGenre.push('Rock-n-Roll');
+// delete musicGenre[1];
+// musicGenre[1] = 'Classics';
+musicGenre[Math.floor((musicGenre.length - 1) / 2)] = 'Classics';
+console.log(musicGenre);
