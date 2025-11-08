@@ -234,6 +234,8 @@ Please try to think of a fast solution: O(n2) or even O(n) if you can.
  */
 
 let arrei = [1, -2, 3, 4, -9, 6];
+let arrei2 = [-1, 2, 3, -9];
+
 let maxSum = 0;
 
 function getMaxSubSum(arr) {
@@ -241,11 +243,30 @@ function getMaxSubSum(arr) {
     let currentSum = 0;
     for (let j = i; j < arr.length; j++) {
       currentSum += arr[j];
+      console.log(maxSum);
+      console.log(currentSum);
       maxSum = Math.max(maxSum, currentSum);
     }
   }
   return maxSum;
 }
 
-getMaxSubSum(arrei);
+getMaxSubSum(arrei2);
 console.log(maxSum);
+
+let card = [2, 3, -1, 5, -2, 1, 6];
+
+let totalMax = 0;
+function getMax(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let max = 0;
+    for (let j = i; j < arr.length; j++) {
+      max += arr[j];
+      totalMax = Math.max(max, totalMax);
+      console.log(Math.max(totalMax));
+    }
+  }
+  return totalMax;
+}
+
+console.log(getMax(card));
