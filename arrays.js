@@ -141,3 +141,10 @@ console.log(String(arr5) === '1,2,3'); // true
 console.log([] + 1); // "1"
 console.log([1] + 1); // "11"
 console.log([1, 2] + 1); // "1,21"
+
+//Don’t compare arrays with ==
+console.log([] == []); // false
+console.log([0] == [0]); // false
+
+console.log(0 == []); // true
+console.log('0' == []); // false
