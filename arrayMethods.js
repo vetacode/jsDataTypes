@@ -1,16 +1,16 @@
 //arr.splice can do insert, remove and replace elements.
 //It mutates original arr
 //syntax: arr.splice(start[, deleteCount, elem1, ..., elemN])
-let console = ['ps', 'xbox', 'nintendo'];
+let games = ['ps', 'xbox', 'nintendo'];
 
-console.log(console.splice(0, 1, 'sega')); //returns the romoved elements
-console.log(console); //console arr mutates
+console.log(games.splice(0, 1, 'sega')); //returns the romoved elements
+console.log(games); //console arr mutates
 
-console.splice(3, 0, 'ps', 'super nintendo');
-console.log(console);
+games.splice(3, 0, 'ps', 'super nintendo');
+console.log(games);
 
-console.splice(-2, 2);
-console.log(console);
+games.splice(-2, 2);
+console.log(games);
 
 //arr.slice. syntax: arr.slice([start], [end])
 //it only copy the arr, not mutates the original arr
@@ -54,3 +54,13 @@ let arrayLike2 = {
 };
 
 console.log(arr.concat(arrayLike2)); // 1,2,something,else
+
+//Iterate forEach: arr.forEach
+//syntax: arr.forEach(function(item, index, array) { ... do something with an item })
+let harpot = ['Bilbo', 'Gandalf', 'Nazgul'];
+
+// harpot.forEach();
+harpot.forEach((item, index, array) => {
+  console.log(`${item} is at index ${index} in ${array} array`);
+});
+console.log(harpot);
