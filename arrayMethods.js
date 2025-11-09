@@ -64,3 +64,17 @@ harpot.forEach((item, index, array) => {
   console.log(`${item} is at index ${index} in ${array} array`);
 });
 console.log(harpot);
+
+//indexOf/lastIndexOf and includes
+let arr2 = [1, 0, false];
+
+console.log(arr2.indexOf(0)); // 1
+console.log(arr2.indexOf(false)); // 2
+console.log(arr2.indexOf(null)); // -1
+
+console.log(arr2.includes(1)); // true
+
+let fruits2 = ['Apple', 'Orange', 'Apple'];
+
+console.log(fruits2.indexOf('Apple')); // 0 (first Apple)
+console.log(fruits2.lastIndexOf('Apple')); // 2 (last Apple)
