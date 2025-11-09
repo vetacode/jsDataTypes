@@ -243,8 +243,6 @@ function getMaxSubSum(arr) {
     let currentSum = 0;
     for (let j = i; j < arr.length; j++) {
       currentSum += arr[j];
-      console.log(maxSum);
-      console.log(currentSum);
       maxSum = Math.max(maxSum, currentSum);
     }
   }
@@ -252,21 +250,29 @@ function getMaxSubSum(arr) {
 }
 
 getMaxSubSum(arrei2);
-console.log(maxSum);
+console.log(maxSum); //this is O(n2) solution
 
+//Fastest solution O(n): Kadane’s algorithm
 let card = [2, 3, -1, 5, -2, 1, 6];
 
-let totalMax = 0;
 function getMax(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let max = 0;
-    for (let j = i; j < arr.length; j++) {
-      max += arr[j];
-      totalMax = Math.max(max, totalMax);
-      console.log(Math.max(totalMax));
-    }
+  let totalMax = 0;
+  let partialMax = 0;
+
+  for (let item of arr) {
+    //untuk setiap item pada arr (for each)
+    partialMax += item; //tambahkean ke partialMax
+    totalMax = Math.max(partialMax, totalMax); //save nilai maximum yg didapat
+    if (partialMax < 0) partialMax = 0; //klo hasilnya negatif, cap di angka 0 minimum (jgn sampe negatif)
   }
   return totalMax;
 }
 
 console.log(getMax(card));
+
+console.log(getMax([-1, 2, 3, -9])); // 5
+console.log(getMax([-1, 2, 3, -9, 11])); // 11
+console.log(getMax([-2, -1, 1, 2])); // 3
+console.log(getMax([100, -9, 2, -3, 5])); // 100
+console.log(getMax([1, 2, 3])); // 6
+console.log(getMax([-1, -2, -3])); // 0
