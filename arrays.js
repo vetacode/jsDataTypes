@@ -85,9 +85,9 @@ for (let i = 0; i < consoles.length; i++) {
 }
 
 //Cool ways: for..of
-// for (let console of consoles) {
-//   console.log(console);
-// }
+for (let console of consoles) {
+  console.log(console);
+}
 
 //Using for..in: (NOT RECOMMENDED FOR ARRAYS)
 for (let key in consoles) {
