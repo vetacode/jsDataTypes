@@ -207,12 +207,16 @@ console.log(arr3.join(', '));
 //REDUCE and REDUCE RIGHT
 //syntax: let value = arr.reduce(function(accumulator, item, index, array) {
 // ... }, [initial]);
-//simple usable syntax: let value = arr.reduce((sum, current) => sum + current, 0);
+//typical syntax with 2 arguments only: let value = arr.reduce((sum, current) => sum + current, 0);
 
 let angka = [2, 3, 1, 5, 6, 2, 1];
 
 let jumlah = angka.reduce((sum, current) => sum + current, 0);
 console.log(jumlah);
+
+//bisa juga ga pake initial value 0
+let jumlah2 = angka.reduce((tot, skr) => tot + skr);
+console.log(jumlah2);
 
 /*
 | Method       | Returns        | Purpose                             |
