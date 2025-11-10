@@ -1,4 +1,4 @@
-//arr.splice can do insert, remove and replace elements.
+//SPLICE can do insert, remove and replace elements.
 //It mutates original arr
 //syntax: arr.splice(start[, deleteCount, elem1, ..., elemN])
 let games = ['ps', 'xbox', 'nintendo'];
@@ -12,7 +12,7 @@ console.log(games);
 games.splice(-2, 2);
 console.log(games);
 
-//arr.slice. syntax: arr.slice([start], [end])
+//SLICE. syntax: arr.slice([start], [end])
 //it only copy the arr, not mutates the original arr
 
 let fruits = ['apple', 'mango', 'banana', 'pear'];
@@ -362,3 +362,34 @@ function filterRange(arr, a, b) {
 let filtered = filterRange(numbres, 1, 4);
 console.log(filtered);
 console.log(numbres);
+
+/**TASK 3
+ * Filter range "in place"
+importance: 4
+Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+The function should only modify the array. It should not return anything.
+
+For instance:
+
+let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+alert( arr ); // [3, 1]
+ */
+let arr7 = [5, 3, 8, 1];
+
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+
+    if (val < a || val > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+}
+
+filterRangeInPlace(arr7, 1, 4);
+console.log(arr7);
