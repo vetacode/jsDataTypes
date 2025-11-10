@@ -201,6 +201,9 @@ let namaku = arr3.map(
 );
 console.log(namaku);
 
+//join
+console.log(arr3.join(', '));
+
 /*
 | Method       | Returns        | Purpose                             |
 | ------------ | -------------- | ----------------------------------- |
@@ -209,6 +212,7 @@ console.log(namaku);
 | `.filter()`  | New array      | Keeps elements that match condition |
 | `.find()`    | Single element | Returns the first that matches      |
 | for.. of     | string         | loops                               |
-| Split        | Arrray from provided strings
+| .split       | Arrray from strings                                  |
+| .join        | Strings from array
 
 */
