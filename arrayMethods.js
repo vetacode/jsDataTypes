@@ -308,3 +308,31 @@ console.log(arraysEqual([1, 2], [1, 2])); // true
 //arr.copyWithin(target, start, end) – copies its elements from position start till position end into itself, at position target (overwrites existing).
 
 //arr.flat(depth)/arr.flatMap(fn) create a new flat array from a multidimensional array.
+
+/** TASK 1
+ * Translate border-left-width to borderLeftWidth
+importance: 5
+Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+That is: removes all dashes, each word after dash becomes uppercased.
+
+Examples:
+
+camelize("background-color") == 'backgroundColor';
+camelize("list-style-image") == 'listStyleImage';
+camelize("-webkit-transition") == 'WebkitTransition';
+P.S. Hint: use split to split the string into an array, transform it and join back.
+ */
+
+let strings = 'background-color';
+
+function camelize(str) {
+  let splitter = str
+    .split('-')
+    .map((item, index) =>
+      index == 0 ? item : item[0].toUpperCase() + item.slice(1)
+    );
+  console.log(splitter);
+  return splitter.join('');
+}
+console.log(camelize(strings));
