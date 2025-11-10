@@ -170,11 +170,11 @@ console.log(num2.reverse());
 console.log(num2);
 
 //SPLIT and JOIN
-//syntax: arr.split(delimit)
+//syntax: arr.split(delimit, number) //number is the returned limit of arr length
 
-let names = 'Bilbo, Gandalf, Nazgul';
+let names = 'Bilbo, Gandalf, Nazgul, Harry, Potter';
 
-let arr3 = names.split(', '); //delimit adalah apa yg mau dihilangkan dari string names, untuk membuat tiap string menjadi masing2 item tersendiri
+let arr3 = names.split(', '); //delimiter adalah apa yg mau dihilangkan dari string names, untuk membuat tiap string menjadi masing2 item tersendiri
 console.log(names);
 console.log(arr3);
 console.log(arr3.length);
@@ -182,6 +182,13 @@ console.log(arr3.length);
 let arr4 = names.split(); //tanpa delimiter it will merged into 1 item
 console.log(arr4);
 console.log(arr4.length);
+
+let arr5 = names.split(', ', 1); //it limits returned array length and ignore the rest
+console.log(arr5);
+
+let tes = 'coba';
+let arr6 = tes.split(''); //empty delimit will split the string into letters
+console.log(arr6);
 
 for (let name of arr3) {
   console.log(`A message to ${name}.`); // A message to Bilbo  (and other names)
@@ -202,6 +209,6 @@ console.log(namaku);
 | `.filter()`  | New array      | Keeps elements that match condition |
 | `.find()`    | Single element | Returns the first that matches      |
 | for.. of     | string         | loops                               |
-| Split        | Arrray from string provided
+| Split        | Arrray from provided strings
 
 */
