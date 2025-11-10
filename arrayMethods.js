@@ -102,6 +102,39 @@ let user = users.find((item) => item.id == 1);
 
 console.log(user.name);
 
+let users2 = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Pete' },
+  { id: 3, name: 'Mary' },
+  { id: 4, name: 'John' },
+];
+
+// Find the index of the first John
+console.log(users2.findIndex((user) => user.name == 'John')); // 0
+
+// Find the index of the last John
+console.log(users2.findLastIndex((user) => user.name == 'John')); // 3
+
+//FILTER
+//Syntax: let results = arr.filter(function(item, index, array) {
+// if true item is pushed to results and the iteration continues
+// returns empty array if nothing found});
+
+let anyUser = users2.filter((item) => item.name == 'John');
+console.log(anyUser);
+
+//Buat contoh penggunaan filter yang memanfaatkan semua parameter filter
+//buat nilai rata-rata:
+
+let num = [10, 40, 5, 25, 30, 40];
+
+let average = num.filter((item, index, arr) => {
+  let avg = arr.reduce((a, b) => a + b) / arr.length;
+  return item > avg && index != 1;
+});
+
+console.log(average); //walaupun angka 40 masuk ke dalam item > avg, tapi kena filter di index!=1
+
 /*
 | Method       | Returns        | Purpose                             |
 | ------------ | -------------- | ----------------------------------- |
