@@ -257,6 +257,26 @@ let mans = [{ age: 16 }, { age: 20 }, { age: 23 }, { age: 30 }];
 
 let soldiers = mans.filter(army.canJoin, army);
 console.log(soldiers);
+console.log(soldiers.length);
+console.log(soldiers[0].age);
+console.log(soldiers[1].age);
+
+//OR
+let soldiers2 = mans.filter((selected) => army.canJoin(selected));
+console.log(soldiers2);
+
+/*
+| Method       | Mutate Array   | Purpose                             |
+| ------------ | -------------- | ----------------------------------- |
+| .splice      | Yes            |      |
+| .sort        | Yes            |           |
+| .reverse     | Yes            |  |
+|   |  |     |
+|   |          |                               |
+|      |                                  |
+|       | 
+
+*/
 
 /*
 | Method       | Returns        | Purpose                             |
@@ -270,3 +290,21 @@ console.log(soldiers);
 | .join        | Strings from array
 
 */
+
+//OTHERS Method
+//arr.some(fn)/arr.every(fn) check the array.
+//similar to || && operators. if fn return true, arr.some(fn) will return true and stops iterating. if fn return false, arr.every(fn) return false and stop iterating
+
+function arraysEqual(arr1, arr2) {
+  return (
+    arr1.length === arr2.length &&
+    arr1.every((value, index) => value === arr2[index])
+  );
+}
+console.log(arraysEqual([1, 2], [1, 2])); // true
+
+//arr.fill(value, start, end) – fills the array with repeating value from index start to end.
+
+//arr.copyWithin(target, start, end) – copies its elements from position start till position end into itself, at position target (overwrites existing).
+
+//arr.flat(depth)/arr.flatMap(fn) create a new flat array from a multidimensional array.
