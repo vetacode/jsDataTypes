@@ -135,6 +135,19 @@ let average = num.filter((item, index, arr) => {
 
 console.log(average); //walaupun angka 40 masuk ke dalam item > avg, tapi kena filter di index!=1
 
+//Transform an array
+//MAP. Syntax: arr.map()
+/*
+let result = arr.map(function(item, index, array) {
+  // returns the new value instead of item
+});
+*/
+
+let movies = ['godfather', '1on1', 'run baby run'];
+
+let movieLength = movies.map((item) => item.length);
+console.log(movieLength);
+
 /*
 | Method       | Returns        | Purpose                             |
 | ------------ | -------------- | ----------------------------------- |
