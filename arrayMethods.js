@@ -161,17 +161,6 @@ console.log(numSort2);
 let numSort3 = num.sort((a, b) => b - a); //descendent sort
 console.log(numSort3);
 
-/*
-| Method       | Returns        | Purpose                             |
-| ------------ | -------------- | ----------------------------------- |
-| `.forEach()` | `undefined`    | Just loops (for side effects)       |
-| `.map()`     | New array      | Transforms each element             |
-| `.filter()`  | New array      | Keeps elements that match condition |
-| `.find()`    | Single element | Returns the first that matches      |
-| for.. of     | string         | loops                               |
-
-*/
-
 //REVERSE: arr.reverse()
 //it mutates original arr
 
@@ -185,9 +174,14 @@ console.log(num2);
 
 let names = 'Bilbo, Gandalf, Nazgul';
 
-let arr3 = names.split(', '); //delimit adalah apa yg mau dihilangkan dari string names
+let arr3 = names.split(', '); //delimit adalah apa yg mau dihilangkan dari string names, untuk membuat tiap string menjadi masing2 item tersendiri
 console.log(names);
 console.log(arr3);
+console.log(arr3.length);
+
+let arr4 = names.split(); //tanpa delimiter it will merged into 1 item
+console.log(arr4);
+console.log(arr4.length);
 
 for (let name of arr3) {
   console.log(`A message to ${name}.`); // A message to Bilbo  (and other names)
@@ -199,3 +193,15 @@ let namaku = arr3.map(
   (item, index) => `namaku adalah ${item}, di urutan nomor ${index + 1}`
 );
 console.log(namaku);
+
+/*
+| Method       | Returns        | Purpose                             |
+| ------------ | -------------- | ----------------------------------- |
+| `.forEach()` | `undefined`    | Just loops (for side effects)       |
+| `.map()`     | New array      | Transforms each element             |
+| `.filter()`  | New array      | Keeps elements that match condition |
+| `.find()`    | Single element | Returns the first that matches      |
+| for.. of     | string         | loops                               |
+| Split        | Arrray from string provided
+
+*/
