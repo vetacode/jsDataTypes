@@ -168,8 +168,34 @@ console.log(numSort3);
 | `.map()`     | New array      | Transforms each element             |
 | `.filter()`  | New array      | Keeps elements that match condition |
 | `.find()`    | Single element | Returns the first that matches      |
+| for.. of     | string         | loops                               |
+
 */
 
 //REVERSE: arr.reverse()
+//it mutates original arr
+
 let num2 = [3, 2, 5, 10, 2, 1, 50];
 console.log(num2.reverse());
+
+console.log(num2);
+
+//SPLIT and JOIN
+//syntax: arr.split(delimit)
+
+let names = 'Bilbo, Gandalf, Nazgul';
+
+let arr3 = names.split(', '); //delimit adalah apa yg mau dihilangkan dari string names
+console.log(names);
+console.log(arr3);
+
+for (let name of arr3) {
+  console.log(`A message to ${name}.`); // A message to Bilbo  (and other names)
+}
+
+//latihan map
+console.log(arr3);
+let namaku = arr3.map(
+  (item, index) => `namaku adalah ${item}, di urutan nomor ${index + 1}`
+);
+console.log(namaku);
