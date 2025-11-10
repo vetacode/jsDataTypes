@@ -135,7 +135,7 @@ let average = num.filter((item, index, arr) => {
 
 console.log(average); //walaupun angka 40 masuk ke dalam item > avg, tapi kena filter di index!=1
 
-//Transform an array
+//TRANSFORMING AN ARRAY
 //MAP. Syntax: arr.map()
 /*
 let result = arr.map(function(item, index, array) {
@@ -229,6 +229,34 @@ let red = letter.reduce((a, b) => a + b);
 console.log(red);
 let redRight = letter.reduceRight((a, b) => a + b);
 console.log(redRight);
+
+//Array.isArray
+console.log(typeof {}); // object
+console.log(typeof []); // object (same)
+
+//to differentiate object with array, use Array.isArray
+console.log(Array.isArray({})); // false
+console.log(Array.isArray([])); // true
+
+//COMPLETENESS sake of Array Method
+//arr.find(func, thisArg);
+//arr.filter(func, thisArg);
+//arr.map(func, thisArg);
+// ...
+// thisArg is the optional last argument
+
+let army = {
+  minAge: 18,
+  maxAge: 27,
+  canJoin(user) {
+    return user.age >= this.minAge && user.age < this.maxAge;
+  },
+};
+
+let mans = [{ age: 16 }, { age: 20 }, { age: 23 }, { age: 30 }];
+
+let soldiers = mans.filter(army.canJoin, army);
+console.log(soldiers);
 
 /*
 | Method       | Returns        | Purpose                             |
