@@ -156,8 +156,9 @@ console.log(numSort); //sorted by strings as default (5 is the biggest)
 
 //use the function to sort by number coorectly
 let numSort2 = num.sort((a, b) => a - b); //ascendent sort
-let numSort3 = num.sort((a, b) => b - a); //descendent sort
 console.log(numSort2);
+
+let numSort3 = num.sort((a, b) => b - a); //descendent sort
 console.log(numSort3);
 
 /*
@@ -168,3 +169,7 @@ console.log(numSort3);
 | `.filter()`  | New array      | Keeps elements that match condition |
 | `.find()`    | Single element | Returns the first that matches      |
 */
+
+//REVERSE: arr.reverse()
+let num2 = [3, 2, 5, 10, 2, 1, 50];
+console.log(num2.reverse());
