@@ -78,3 +78,7 @@ let fruits2 = ['Apple', 'Orange', 'Apple'];
 
 console.log(fruits2.indexOf('Apple')); // 0 (first Apple)
 console.log(fruits2.lastIndexOf('Apple')); // 2 (last Apple)
+
+let alphabet = [NaN];
+console.log(alphabet.indexOf(NaN)); //-1 (wrong, should be index 0)
+console.log(alphabet.includes(NaN)); //true (correct)
