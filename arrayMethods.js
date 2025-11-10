@@ -82,3 +82,31 @@ console.log(fruits2.lastIndexOf('Apple')); // 2 (last Apple)
 let alphabet = [NaN];
 console.log(alphabet.indexOf(NaN)); //-1 (wrong, should be index 0)
 console.log(alphabet.includes(NaN)); //true (correct)
+
+//FIND and findIndex/findLastIndex
+//syntax: let result = arr.find(function(item, index, array) {
+// if true is returned, item is returned and iteration is stopped
+//for falsy scenario returns undefined })
+
+let users = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Pete' },
+  { id: 3, name: 'Mary' },
+];
+
+users.forEach((item) => {
+  console.log(`this is ${item.name}`);
+});
+
+let user = users.find((item) => item.id == 1);
+
+console.log(user.name);
+
+/*
+| Method       | Returns        | Purpose                             |
+| ------------ | -------------- | ----------------------------------- |
+| `.forEach()` | `undefined`    | Just loops (for side effects)       |
+| `.map()`     | New array      | Transforms each element             |
+| `.filter()`  | New array      | Keeps elements that match condition |
+| `.find()`    | Single element | Returns the first that matches      |
+*/
