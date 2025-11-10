@@ -148,6 +148,18 @@ let movies = ['godfather', '1on1', 'run baby run'];
 let movieLength = movies.map((item) => item.length);
 console.log(movieLength);
 
+//SORT: it return the sorted arr (mutate the original arr)
+//syntax: arr.sort(fn)
+
+let numSort = num.sort(); //the default is sorted by string comparison
+console.log(numSort); //sorted by strings as default (5 is the biggest)
+
+//use the function to sort by number coorectly
+let numSort2 = num.sort((a, b) => a - b); //ascendent sort
+let numSort3 = num.sort((a, b) => b - a); //descendent sort
+console.log(numSort2);
+console.log(numSort3);
+
 /*
 | Method       | Returns        | Purpose                             |
 | ------------ | -------------- | ----------------------------------- |
