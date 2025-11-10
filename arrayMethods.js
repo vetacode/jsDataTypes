@@ -218,6 +218,18 @@ console.log(jumlah);
 let jumlah2 = angka.reduce((tot, skr) => tot + skr);
 console.log(jumlah2);
 
+//The method arr.reduceRight does the same but goes from right to left.
+let jumlahRight = angka.reduceRight((sum, init) => sum + init, 0);
+console.log(jumlahRight);
+
+//reduceRight is useful for strings concatenation
+let letter = ['a', 'b', 'c', 'd'];
+
+let red = letter.reduce((a, b) => a + b);
+console.log(red);
+let redRight = letter.reduceRight((a, b) => a + b);
+console.log(redRight);
+
 /*
 | Method       | Returns        | Purpose                             |
 | ------------ | -------------- | ----------------------------------- |
