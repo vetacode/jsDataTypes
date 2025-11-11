@@ -690,7 +690,7 @@ function getAverageAge(arr) {
 
 console.log(getAverageAge(arr11));
 
-/** TASK 12
+/** TASK 12 ==> Currently using slower solution, later in map and set will show how to optimize the performance
  * Filter unique array members
 importance: 4
 Let arr be an array.
