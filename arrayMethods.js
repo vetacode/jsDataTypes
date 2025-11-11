@@ -150,11 +150,12 @@ console.log(movieLength);
 
 //SORT: it return the sorted arr (mutate the original arr)
 //syntax: arr.sort(fn)
+console.log(num);
 
 let numSort = num.sort(); //the default is sorted by string comparison
 console.log(numSort); //sorted by strings as default (5 is the biggest)
 
-//use the function to sort by number coorectly
+//use the function to sort by number correctly
 let numSort2 = num.sort((a, b) => a - b); //ascendent sort
 console.log(numSort2);
 
@@ -171,6 +172,7 @@ console.log(num2);
 
 //SPLIT and JOIN
 //syntax: arr.split(delimit, number) //number is the returned limit of arr length
+//convert string to Array of string/s
 
 let names = 'Bilbo, Gandalf, Nazgul, Harry, Potter';
 
@@ -183,7 +185,7 @@ let arr4 = names.split(); //tanpa delimiter it will merged into 1 item
 console.log(arr4);
 console.log(arr4.length);
 
-let arr5 = names.split(', ', 1); //it limits returned array length and ignore the rest
+let arr5 = names.split(', ', 2); //it limits returned array length and ignore the rest
 console.log(arr5);
 
 let tes = 'coba';
@@ -201,7 +203,7 @@ let namaku = arr3.map(
 );
 console.log(namaku);
 
-//join
+//JOIN: kebalikan split(), convert Array of strings to string
 console.log(arr3.join(', '));
 
 //REDUCE and REDUCE RIGHT
@@ -433,3 +435,57 @@ function copySorted(arr) {
 let sorted = copySorted(arr9);
 console.log(sorted);
 console.log(arr9);
+
+/** TASK 6
+ * Create an extendable calculator
+importance: 5
+Create a constructor function Calculator that creates “extendable” calculator objects.
+
+The task consists of two parts.
+
+First, implement the method calculate(str) that takes a string like "1 + 2" in the format “NUMBER operator NUMBER” (space-delimited) and returns the result. Should understand plus + and minus -.
+
+Usage example:
+
+let calc = new Calculator;
+
+alert( calc.calculate("3 + 7") ); // 10
+Then add the method addMethod(name, func) that teaches the calculator a new operation. It takes the operator name and the two-argument function func(a,b) that implements it.
+
+For instance, let’s add the multiplication *, division / and power **:
+
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
+No parentheses or complex expressions in this task.
+The numbers and the operator are delimited with exactly one space.
+There may be error handling if you’d like to add it.
+ */
+
+function Calculator() {
+  this.methods = {
+    '-': (a, b) => a - b,
+    '+': (a, b) => a + b,
+  };
+
+  this.calculate = (str) => {
+    let split = str.split(' '),
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
+
+    if (!this.methods[op] || isNaN(a) | isNaN(b)) return NaN;
+    return this.methods[op](a, b);
+  };
+  this.addMethods = function (name, func) {
+    this.methods[name] = func;
+  };
+}
+
+let calc = new Calculator();
+
+console.log(calc.calculate('3 + 7')); // 10
