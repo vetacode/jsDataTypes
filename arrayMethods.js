@@ -393,3 +393,18 @@ function filterRangeInPlace(arr, a, b) {
 
 filterRangeInPlace(arr7, 1, 4);
 console.log(arr7);
+
+/** TASK 4
+ * Sort in decreasing order
+importance: 4
+let arr = [5, 2, 1, -10, 8];
+
+// ... your code to sort it in decreasing order
+
+alert( arr ); // 8, 5, 2, 1, -10
+ */
+
+let arr8 = [5, 2, 1, -10, 8];
+
+arr8.sort((a, b) => b - a);
+console.log(arr8);
