@@ -471,16 +471,21 @@ function Calculator() {
     '-': (a, b) => a - b,
     '+': (a, b) => a + b,
   };
+  console.log(this);
 
-  this.calculate = (str) => {
-    let split = str.split(' '),
-      a = +split[0],
-      op = split[1],
-      b = +split[2];
+  this.calculate = function (str) {
+    let splitter = str.split(' '),
+      a = +splitter[0],
+      op = splitter[1],
+      b = +splitter[2];
 
-    if (!this.methods[op] || isNaN(a) | isNaN(b)) return NaN;
-    return this.methods[op](a, b);
+    console.log(splitter);
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) return NaN;
+
+    return this.methods[op](a, b); //Look up the function for op in methods, call it with a and b, and return the result.
   };
+
   this.addMethods = function (name, func) {
     this.methods[name] = func;
   };
@@ -489,3 +494,6 @@ function Calculator() {
 let calc = new Calculator();
 
 console.log(calc.calculate('3 + 7')); // 10
+
+calc.addMethods('*', (a, b) => a * b);
+console.log(calc.calculate('4 * 5')); // 20
