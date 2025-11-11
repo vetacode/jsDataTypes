@@ -406,5 +406,30 @@ alert( arr ); // 8, 5, 2, 1, -10
 
 let arr8 = [5, 2, 1, -10, 8];
 
-arr8.sort((a, b) => b - a);
+console.log(arr8.sort((a, b) => b - a));
 console.log(arr8);
+
+/** TASK 5
+ * Copy and sort array
+importance: 5
+We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+Create a function copySorted(arr) that returns such a copy.
+
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (no changes)
+ */
+
+let arr9 = ['HTML', 'JavaScript', 'CSS'];
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let sorted = copySorted(arr9);
+console.log(sorted);
+console.log(arr9);
