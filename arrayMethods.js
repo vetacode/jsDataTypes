@@ -569,3 +569,40 @@ let usersMapped = users4.map((user) => ({
 console.log(usersMapped);
 console.log(usersMapped[0].id);
 console.log(usersMapped[0].fullName);
+
+/**TASK 9
+ * Sort users by age
+importance: 5
+Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+For instance:
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+sortByAge(arr);
+
+// now: [john, mary, pete]
+alert(arr[0].name); // John
+alert(arr[1].name); // Mary
+alert(arr[2].name); // Pete
+ */
+
+let john3 = { name: 'John', age: 25 };
+let pete3 = { name: 'Pete', age: 30 };
+let mary3 = { name: 'Mary', age: 28 };
+
+let arrai = [pete, john, mary];
+
+function sortByAge(users) {
+  return users.sort((a, b) => a.age - b.age);
+}
+
+let userSort = sortByAge(arrai);
+console.log(userSort);
+console.log(arrai[0].name);
+console.log(arrai[1].name);
+console.log(arrai[2].name);
