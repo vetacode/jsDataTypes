@@ -658,3 +658,34 @@ function shuffle2(array) {
 console.log(shuffle2(arr10));
 console.log(shuffle2(arr10));
 console.log(shuffle2(arr10));
+
+/**TASK 11
+ * Get average age
+importance: 4
+Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+
+The formula for the average is (age1 + age2 + ... + ageN) / N.
+
+For instance:
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [ john, pete, mary ];
+
+alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+ */
+
+let john4 = { name: 'John', age: 25 };
+let pete4 = { name: 'Pete', age: 30 };
+let mary4 = { name: 'Mary', age: 29 };
+
+let arr11 = [john, pete, mary];
+
+function getAverageAge(arr) {
+  let arrAge = arr.reduce((a, b) => a + b.age, 0) / arr.length;
+  return Math.round((arrAge * 100) / 100);
+}
+
+console.log(getAverageAge(arr11));
