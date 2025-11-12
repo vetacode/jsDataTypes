@@ -48,10 +48,6 @@ let range2 = {
   },
 };
 
-for (let num of range2) {
-  console.log(num); // 1, then 2, 3, 4, 5
-}
-
 //ITERATING STRINGS
 let snack = 'chitato';
 
@@ -71,7 +67,6 @@ while (true) {
 
 //ARRAY.FROM
 //Convert arrary-like to array
-
 let arrayLike = {
   0: 'Hello',
   1: 'World',
@@ -89,8 +84,10 @@ console.log(currency.split(', '));
 console.log(currency); //original array is not mutate
 console.log(currArr.pop());
 
-//for of loop will do the same
+let rangeConvert = Array.from(range);
+console.log(rangeConvert);
 
+//for of loop will do the same
 let str2 = '𝒳😂';
 
 let chars = [];
@@ -100,3 +97,11 @@ for (let char of str2) {
 
 console.log(chars);
 console.log(str2);
+
+//can also use for of loop, but still have to have [Symbol.iterator]() in the scope
+let numRes = [];
+for (let num of range2) {
+  console.log(num);
+  numRes.push(num);
+}
+console.log(numRes);
