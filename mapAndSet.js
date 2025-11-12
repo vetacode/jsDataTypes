@@ -73,9 +73,9 @@ let pricesMap = new Map(fruits);
 for (let fruit of pricesMap.keys()) {
   console.log(fruit);
 }
-for (let fruit of pricesMap.values()) {
-  console.log(fruit);
+for (let price of pricesMap.values()) {
+  console.log(price);
 }
-for (let fruit of pricesMap.entries()) {
-  console.log(fruit);
+for (let entry of pricesMap) {
+  console.log(entry);
 }
