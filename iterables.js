@@ -51,3 +51,10 @@ let range2 = {
 for (let num of range2) {
   console.log(num); // 1, then 2, 3, 4, 5
 }
+
+//ITERATING STRINGS
+let snack = 'chitato';
+
+for (let eat of snack) {
+  console.log(eat);
+}
