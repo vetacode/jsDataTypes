@@ -21,6 +21,11 @@ let range = {
   },
 };
 
+let iter = 0;
+
 for (let num of range) {
-  console.log(num); // 1, 2, 3, 4, 5
+  console.log(num);
+  iter += num;
 }
+
+console.log(iter);
