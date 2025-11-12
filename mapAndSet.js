@@ -70,6 +70,8 @@ let fruits = [
 ];
 let pricesMap = new Map(fruits);
 
+console.log(pricesMap);
+
 for (let fruit of pricesMap.keys()) {
   console.log(fruit);
 }
@@ -79,3 +81,8 @@ for (let price of pricesMap.values()) {
 for (let entry of pricesMap) {
   console.log(entry);
 }
+
+//MAP has forEach() built in method
+pricesMap.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
