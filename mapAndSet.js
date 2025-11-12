@@ -20,9 +20,36 @@ map.set('1', 'str1'); // a string key
 map.set(1, 'num1'); // a numeric key
 map.set(true, 'bool1'); // a boolean key
 
+console.log(map);
+
 // The regular Object would convert keys to string
 // Map keeps the type, so these two are different:
 console.log(map.get(1)); // 'num1'
 console.log(map.get('1')); // 'str1'
 
 console.log(map.size); // 3
+
+//Map can also use objects as keys.
+let john = { name: 'John' };
+
+// for every user, let's store their visits count
+let visitsCountMap = new Map();
+
+// john is the key for the map
+visitsCountMap.set(john, 123);
+
+console.log(visitsCountMap.get(john)); // 123
+
+let john2 = { name: 'John' };
+let ben = { name: 'Ben' };
+
+let visitsCountObj = {}; // try to use an object
+
+visitsCountObj[ben] = 234; // try to use ben object as the key
+visitsCountObj[john2] = 123; // try to use john object as the key, ben object will get replaced
+
+// That's what got written!
+console.log(visitsCountObj['[object Object]']); // 123
+
+//map chaining: produce object
+console.log(map.set('1', 'str1').set(1, 'num1').set(true, 'bool1'));
