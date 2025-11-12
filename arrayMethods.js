@@ -780,5 +780,5 @@ function groupById(arr) {
 }
 
 let usersById = groupById(users5);
-
+console.log(users5);
 console.log(usersById);
