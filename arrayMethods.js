@@ -796,4 +796,6 @@ function groupById2(arr) {
 
 console.log(groupById2(users5));
 
-//other alternatie
+//other alternative: using Map to results non-string keys or better performance for frequent updates
+const map = new Map(users5.map((u) => [u.id, u]));
+console.log(map);
