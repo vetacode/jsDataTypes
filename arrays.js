@@ -44,7 +44,7 @@ console.log(fruits);
 console.log(fruits.pop()); // remove "Pear" and log it
 console.log(fruits); // Apple, Orange
 
-//push. Append the element to the end of the array:
+//PUSH. Append the element to the end of the array:
 console.log(fruits);
 fruits.push('Pear');
 console.log(fruits); // Apple, Orange, Pear

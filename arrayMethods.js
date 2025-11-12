@@ -276,8 +276,8 @@ console.log(soldiers2);
 | .reverse     | Yes            |  |
 | .split       | No             | convert string to array & split, create a copy   |
 | .slice       | No             | get copy of the range of targeted index of arr    |
-|              |                |
-|       | 
+| .push        | No             | add string to the last index of arr, convert string to arr of strings  | 
+| 
 
 */
 

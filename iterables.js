@@ -88,3 +88,15 @@ console.log(currency.split(''));
 console.log(currency.split(', '));
 console.log(currency); //original array is not mutate
 console.log(currArr.pop());
+
+//for of loop will do the same
+
+let str2 = '𝒳😂';
+
+let chars = [];
+for (let char of str2) {
+  chars.push(char);
+}
+
+console.log(chars);
+console.log(str2);
