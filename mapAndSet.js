@@ -53,3 +53,29 @@ console.log(visitsCountObj['[object Object]']); // 123
 
 //map chaining: produce object
 console.log(map.set('1', 'str1').set(1, 'num1').set(true, 'bool1'));
+
+/**
+ * Iteration over Map
+For looping over a map, there are 3 methods:
+
+map.keys() – returns an iterable for keys,
+map.values() – returns an iterable for values,
+map.entries() – returns an iterable for entries [key, value], it’s used by default in for..of.
+ */
+
+let fruits = [
+  ['banana', 100],
+  ['apple', 200],
+  ['grape', 300],
+];
+let pricesMap = new Map(fruits);
+
+for (let fruit of pricesMap.keys()) {
+  console.log(fruit);
+}
+for (let fruit of pricesMap.values()) {
+  console.log(fruit);
+}
+for (let fruit of pricesMap.entries()) {
+  console.log(fruit);
+}
