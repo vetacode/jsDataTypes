@@ -83,6 +83,8 @@ for (let entry of pricesMap) {
 }
 
 //MAP has forEach() built in method
-pricesMap.forEach((value, key, map) => {
-  console.log(`${key}: ${value}`);
+let values = pricesMap.forEach((value, key, map) => {
+  return `${key}: ${value}`(`Total items inside is: ${map.size}`);
 });
+
+console.log(values);
