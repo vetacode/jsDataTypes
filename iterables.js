@@ -84,6 +84,7 @@ console.log(arr.pop()); // World (method works)
 let currency = 'IDR, USD, SGD';
 let currArr = Array.from(currency);
 console.log(currArr);
+console.log(currency.split(''));
 console.log(currency.split(', '));
 console.log(currency); //original array is not mutate
 console.log(currArr.pop());

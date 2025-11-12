@@ -17,7 +17,7 @@ console.log(games);
 
 let fruits = ['apple', 'mango', 'banana', 'pear'];
 
-console.log(fruits.slice(1, 3)); //copy from 1 to 3 (not include the index 3) ==> returns a new copy array
+console.log(fruits.slice(1, 3)); //copy from 1 to 3 (exclude index 3) ==> returns a new copy array
 console.log(fruits); //the original array still intact (no mutation)
 
 let newFruits = fruits.slice(); //shallow clone/copy entire arr
@@ -274,9 +274,9 @@ console.log(soldiers2);
 | .splice      | Yes            |      |
 | .sort        | Yes            |           |
 | .reverse     | Yes            |  |
-| .split       | No             |     |
-|      |          |                               |
-|      |                                  |
+| .split       | No             | convert string to array & split, create a copy   |
+| .slice       | No             | get copy of the range of targeted index of arr    |
+|              |                |
 |       | 
 
 */
@@ -288,7 +288,7 @@ console.log(soldiers2);
 | `.map()`     | New array      | Array           | Transforms each element             |
 | `.filter()`  | New array      |                 | Keeps elements that match condition |
 | `.find()`    | Single element |                 | Returns the first that matches      |
-| for.. of     | string         |                 | loops                               |
+|  for.. of     | string         |                 | loops                               |
 | .split       | Arrray         | Strings         |
 | .join        | Strings        | Array           |
 
