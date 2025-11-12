@@ -173,6 +173,7 @@ console.log(num2);
 //SPLIT and JOIN
 //syntax: arr.split(delimit, number) //number is the returned limit of arr length
 //convert string to Array of string/s
+//SPLIT
 
 let names = 'Bilbo, Gandalf, Nazgul, Harry, Potter';
 
@@ -273,8 +274,8 @@ console.log(soldiers2);
 | .splice      | Yes            |      |
 | .sort        | Yes            |           |
 | .reverse     | Yes            |  |
-|   |  |     |
-|   |          |                               |
+| .split       | No             |     |
+|      |          |                               |
 |      |                                  |
 |       | 
 
