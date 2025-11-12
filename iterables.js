@@ -58,3 +58,13 @@ let snack = 'chitato';
 for (let eat of snack) {
   console.log(eat);
 }
+
+//Calling an iterator explicitly: it gives more flexibility to play with the iteration than using for..of
+let str = 'Hello';
+let iterator = str[Symbol.iterator]();
+
+while (true) {
+  let result = iterator.next();
+  if (result.done) break;
+  console.log(result.value);
+}
