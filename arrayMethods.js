@@ -782,3 +782,18 @@ function groupById(arr) {
 let usersById = groupById(users5);
 console.log(users5);
 console.log(usersById);
+
+//Alternative: using for..of loop. same performance O(n)
+
+function groupById2(arr) {
+  const res = {};
+
+  for (const user of arr) {
+    res[user.id] = user;
+  }
+  return res;
+}
+
+console.log(groupById2(users5));
+
+//other alternatie
