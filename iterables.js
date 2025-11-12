@@ -1,5 +1,8 @@
 'use strict';
 
+//ITERABLE is the object that can be used in for..of loop
+//ARRAY-LIKE is the object that has indexed prop and length
+
 //SYMBOL.ITERATOR
 let range = {
   from: 1,
@@ -105,3 +108,15 @@ for (let num of range2) {
   numRes.push(num);
 }
 console.log(numRes);
+
+//work with surrogate
+function slice(str, start, end) {
+  return Array.from(str).slice(start, end).join('');
+}
+
+let str3 = '𝒳😂𩷶';
+
+console.log(slice(str3, 1, 3)); // 😂𩷶
+
+// the native method does not support surrogate pairs
+console.log(str3.slice(1, 3)); // garbage (two pieces from different surrogate pairs)
