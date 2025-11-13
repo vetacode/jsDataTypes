@@ -98,6 +98,7 @@ let values2 = Array.from(
 console.log(values2);
 
 //OBJECT.ENTRIES: Map from Object
+//Syntax: Object.entries(obj)
 // array of [key, value] pairs
 let map2 = new Map([
   ['1', 'str1'],
@@ -105,3 +106,5 @@ let map2 = new Map([
   [true, 'bool1'],
 ]);
 console.log(map2.get('1')); // str1
+
+//OBJECT.FROMENTRIES: Object from Map
