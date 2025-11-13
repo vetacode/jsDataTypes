@@ -79,15 +79,15 @@ for (let fruit of pricesMap.keys()) {
 for (let price of pricesMap.values()) {
   console.log(price);
 }
-for (let entry of pricesMap) {
+for (let entry of pricesMap.entries()) {
   console.log(entry);
 }
 
 //MAP has forEach() built in method
 let values = [];
 
-pricesMap.forEach((value, key, map) => {
-  values.push(`${key}: ${value} (Total items: ${map.size})`);
+pricesMap.forEach((value, key, pricesMap) => {
+  values.push(`${key}: ${value} (Total items: ${pricesMap.size})`);
 });
 console.log(values);
 
@@ -172,3 +172,49 @@ console.log(visitor.delete(andi));
 for (let user of visitor) {
   console.log(user.name);
 }
+
+//Iteration over Set
+//We can loop over a set either with for..of or using forEach:
+let buah = new Set(['mangga', 'jeruk', 'salak']);
+
+console.log(buah);
+
+for (let fruit of buah) {
+  console.log(fruit);
+}
+
+buah.forEach((item, itemAgain, buah) => {
+  console.log(item, itemAgain, buah.size);
+});
+
+/**
+ * Set iterators methods:
+
+set.keys() – returns an iterable object for values,
+set.values() – same as set.keys(), for compatibility with Map,
+set.entries() – returns an iterable object for entries [value, value], exists for compatibility with Map.
+ */
+
+
+/**TRASK 1
+ * Filter unique array members
+importance: 5
+Let arr be an array.
+
+Create a function unique(arr) that should return an array with unique items of arr.
+
+For instance:
+
+function unique(arr) {
+  /* your code */
+}
+
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+alert( unique(values) ); // Hare, Krishna, :-O
+P.S. Here strings are used, but can be values of any type.
+
+P.P.S. Use Set to store unique values.
+ */
