@@ -195,8 +195,7 @@ set.values() – same as set.keys(), for compatibility with Map,
 set.entries() – returns an iterable object for entries [value, value], exists for compatibility with Map.
  */
 
-
-/**TRASK 1
+/**TASK 1
  * Filter unique array members
 importance: 5
 Let arr be an array.
@@ -206,7 +205,7 @@ Create a function unique(arr) that should return an array with unique items of a
 For instance:
 
 function unique(arr) {
-  /* your code */
+  / your code /
 }
 
 let values = ["Hare", "Krishna", "Hare", "Krishna",
@@ -218,3 +217,23 @@ P.S. Here strings are used, but can be values of any type.
 
 P.P.S. Use Set to store unique values.
  */
+
+let values3 = [
+  'Hare',
+  'Krishna',
+  'Hare',
+  'Krishna',
+  'Krishna',
+  'Krishna',
+  'Hare',
+  'Hare',
+  ':-O',
+];
+
+function unique(arr) {
+  let arrai = new Set(arr);
+  console.log(arrai);
+  return Array.from(arrai);
+}
+
+console.log(unique(values3)); // Hare, Krishna, :-O
