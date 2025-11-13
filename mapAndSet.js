@@ -274,3 +274,22 @@ function aclean(arr) {
 }
 
 console.log(aclean(arr));
+
+//Alternative: using Object
+function aclean2(arr) {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    let sorted = arr[i].toLowerCase().split('').sort().join('');
+    console.log(sorted);
+    console.log(obj[sorted]);
+    obj[sorted] = arr[i];
+  }
+  console.log(Object.values(obj));
+  return Object.values(obj);
+}
+
+console.log(aclean2(arr));
+
+/**
+ *
+ */
