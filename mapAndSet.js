@@ -6,6 +6,7 @@ Map is a collection of keyed data items, just like an Object. But the main diffe
 
 Methods and properties are:
 new Map() – creates the map.
+map.entries() - iterating the new Map sets
 map.set(key, value) – stores the value by the key.
 map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.
 map.has(key) – returns true if the key exists, false otherwise.
