@@ -235,5 +235,42 @@ function unique(arr) {
   console.log(arrai);
   return Array.from(arrai);
 }
-
 console.log(unique(values3)); // Hare, Krishna, :-O
+
+/**TASK 2
+ * Filter anagrams
+importance: 4
+Anagrams are words that have the same number of same letters, but in different order.
+
+For instance:
+
+nap - pan
+ear - are - era
+cheaters - hectares - teachers
+Write a function aclean(arr) that returns an array cleaned from anagrams.
+
+For instance:
+
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert( aclean(arr) ); // "nap,teachers,ear" or "PAN,cheaters,era"
+From every anagram group should remain only one word, no matter which one.
+ */
+
+let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+
+function aclean(arr) {
+  let map = new Map();
+  console.log(map);
+
+  for (let word of arr) {
+    let sorted = word.toLowerCase().split('').sort().join('');
+    console.log(sorted);
+    console.log(map.set(sorted, word));
+  }
+  console.log(map.values());
+  console.log(map);
+  return Array.from(map.values());
+}
+
+console.log(aclean(arr));
