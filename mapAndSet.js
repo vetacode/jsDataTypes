@@ -118,7 +118,7 @@ let map2 = new Map([
 console.log(map2.get('1')); // str1
 
 //OBJECT.FROMENTRIES: to create a regular Object from Map
-//Syntax: Object.fromEntries([iteration Obj])
+//Syntax: Object.fromEntries([iterable])
 let cars = Object.fromEntries([
   ['hyundai', 1000],
   ['toyota', 300],
@@ -150,3 +150,25 @@ set.has(value) – returns true if the value exists in the set, otherwise false.
 set.clear() – removes everything from the set.
 set.size – is the elements count.
  */
+
+//Set only keeps unique values
+let visitor = new Set();
+
+let andi = { name: 'Andi' };
+let siska = { name: 'Siska' };
+let rama = { name: 'Rama' };
+
+visitor.add(andi);
+visitor.add(siska);
+visitor.add(andi);
+visitor.add(rama);
+visitor.add(andi);
+visitor.add(rama);
+
+console.log(visitor);
+console.log(visitor.size);
+console.log(visitor.delete(andi));
+
+for (let user of visitor) {
+  console.log(user.name);
+}
