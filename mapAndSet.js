@@ -98,7 +98,16 @@ let values2 = Array.from(
 console.log(values2);
 
 //OBJECT.ENTRIES: Map from Object
-//Syntax: Object.entries(obj)
+//Syntax: Object.entries(obj): to create a Map from plain Object
+
+let obj = {
+  name: 'John',
+  age: 30,
+};
+let map3 = new Map(Object.entries(obj));
+console.log(Object.entries(obj));
+console.log(map3.get('name'));
+
 // array of [key, value] pairs
 let map2 = new Map([
   ['1', 'str1'],
