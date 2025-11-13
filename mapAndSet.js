@@ -124,3 +124,15 @@ let cars = Object.fromEntries([
 ]);
 
 console.log(cars);
+
+//We have Object stored in a Map but we need to pass it to external that expect plain Object:
+let halloween = new Map();
+halloween.set('dracula', 5);
+halloween.set('draculi', 3);
+halloween.set('draculay', 1);
+console.log(halloween);
+console.log(halloween.entries());
+
+let halloweenObj = Object.fromEntries(halloween.entries());
+console.log(halloweenObj);
+console.log(halloweenObj.draculi);
