@@ -116,4 +116,11 @@ let map2 = new Map([
 ]);
 console.log(map2.get('1')); // str1
 
-//OBJECT.FROMENTRIES: Object from Map
+//OBJECT.FROMENTRIES: to create a regular Object from Map
+let cars = Object.fromEntries([
+  ['hyundai', 1000],
+  ['toyota', 300],
+  ['honda', 500],
+]);
+
+console.log(cars);
