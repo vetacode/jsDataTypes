@@ -83,11 +83,19 @@ for (let entry of pricesMap) {
 }
 
 //MAP has forEach() built in method
-let values = pricesMap.forEach((value, key, map) => {
-  return `${key}: ${value}`(`Total items inside is: ${map.size}`);
-});
+let values = [];
 
+pricesMap.forEach((value, key, map) => {
+  values.push(`${key}: ${value} (Total items: ${map.size})`);
+});
 console.log(values);
+
+//Bisa juga pakai Array.from()
+let values2 = Array.from(
+  pricesMap,
+  ([key, value]) => `${key}: ${value} (Total items: ${pricesMap.size})`
+);
+console.log(values2);
 
 //OBJECT.ENTRIES: Map from Object
 // array of [key, value] pairs
@@ -96,5 +104,4 @@ let map2 = new Map([
   [1, 'num1'],
   [true, 'bool1'],
 ]);
-
-alert(map2.get('1')); // str1
+console.log(map2.get('1')); // str1

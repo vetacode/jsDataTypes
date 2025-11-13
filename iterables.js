@@ -69,7 +69,8 @@ while (true) {
 }
 
 //ARRAY.FROM
-//Convert arrary-like to array
+//Syntax: Array.from(arrayLike, mapFunction?, thisArg?)
+//Convert array-like objects and iterable objects (Map, Set or anything can loop with for..of) into a real Array
 let arrayLike = {
   0: 'Hello',
   1: 'World',
