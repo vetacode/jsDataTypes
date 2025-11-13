@@ -4,7 +4,7 @@
 let games = ['ps', 'xbox', 'nintendo'];
 
 console.log(games.splice(0, 1, 'sega')); //returns the romoved elements
-console.log(games); //console arr mutates
+console.log(games); //games arr mutates
 
 games.splice(3, 0, 'ps', 'super nintendo');
 console.log(games);
@@ -17,7 +17,7 @@ console.log(games);
 
 let fruits = ['apple', 'mango', 'banana', 'pear'];
 
-console.log(fruits.slice(1, 3)); //copy from 1 to 3 (exclude index 3) ==> returns a new copy array
+console.log(fruits.slice(0, 3)); //copy from 0 to 3 (exclude index 3) ==> returns a new copy array
 console.log(fruits); //the original array still intact (no mutation)
 
 let newFruits = fruits.slice(); //shallow clone/copy entire arr
