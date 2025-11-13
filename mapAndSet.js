@@ -307,3 +307,19 @@ let keys = map.keys();
 keys.push("more");
 Why? How can we fix the code to make keys.push work?
  */
+
+let user = new Map();
+console.log(user);
+
+user.set('name', 'John');
+console.log(user);
+
+let keys = user.keys();
+console.log(keys);
+
+let arrKeys = Array.from(keys);
+console.log(arrKeys);
+
+let arrPush = arrKeys.push('more'); //it will returns the new length of the array!, not the array results
+console.log(arrPush);
+console.log(arrKeys); // it will logs array results
