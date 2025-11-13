@@ -88,3 +88,13 @@ let values = pricesMap.forEach((value, key, map) => {
 });
 
 console.log(values);
+
+//OBJECT.ENTRIES: Map from Object
+// array of [key, value] pairs
+let map2 = new Map([
+  ['1', 'str1'],
+  [1, 'num1'],
+  [true, 'bool1'],
+]);
+
+alert(map2.get('1')); // str1
