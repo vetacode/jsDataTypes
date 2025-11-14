@@ -19,11 +19,12 @@ console.log(array[0]); //but the obj inside the array is still there and we can 
 let amy = { name: 'Amy' };
 
 let map = new Map();
-let amyMap = map.set(amy, '...');
+map.set(amy, '...');
 console.log(map);
 
 amy = null;
-console.log(amy);
-console.log(map);
+console.log(amy); //the obj has been removed from memory
+console.log(map); //but Map still has it
 console.log(map.keys());
-console.log(Array.from(map.keys()));
+console.log(Array.from(map.keys())); //we can get the array
+console.log(Array.from(map.keys())[0]); //and we can get the object
