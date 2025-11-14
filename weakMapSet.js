@@ -136,7 +136,7 @@ let messages = [
   { text: 'See you soon', from: 'Alice' },
 ];
 
-let readMessages = new Set();
+let readMessages = new WeakSet();
 
 function markAsRead(msg) {
   readMessages.add(msg);
@@ -162,3 +162,42 @@ console.log(
 
 messages.shift();
 console.log(messages);
+
+/**TASK 2
+ * Store read dates
+importance: 5
+There’s an array of messages as in the previous task. The situation is similar.
+
+let messages = [
+  {text: "Hello", from: "John"},
+  {text: "How goes?", from: "John"},
+  {text: "See you soon", from: "Alice"}
+];
+The question now is: which data structure you’d suggest to store the information: “when the message was read?”.
+
+In the previous task we only needed to store the “yes/no” fact. Now we need to store the date, and it should only remain in memory until the message is garbage collected.
+
+P.S. Dates can be stored as objects of built-in Date class, that we’ll cover later.
+ */
+
+let messages2 = [
+  { text: 'Hello', from: 'John' },
+  { text: 'How goes?', from: 'John' },
+  { text: 'See you soon', from: 'Alice' },
+];
+
+let readMessage = new Map();
+
+let date = new Date(2025, 1, 1);
+
+readMessage.set(messages2[0], date);
+console.log(readMessage);
+
+console.log(readMessage.keys()); //resulting Iterator{}. it can be looped but its not array so cannot use .map(), .length or .filter().
+
+console.log([...readMessage.keys()]); //so we use spread op with square bracket to make an array, then it can use arr method
+let arrRead = [...readMessage.keys()];
+console.log(arrRead[0]);
+console.log(arrRead.length);
+
+console.log(Array.from(readMessage));
