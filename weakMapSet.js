@@ -19,6 +19,11 @@ console.log(array[0]); //but the obj inside the array is still there and we can 
 let amy = { name: 'Amy' };
 
 let map = new Map();
-map.set(amy, '...');
-
+let amyMap = map.set(amy, '...');
 console.log(map);
+
+amy = null;
+console.log(amy);
+console.log(map);
+console.log(map.keys());
+console.log(Array.from(map.keys()));
