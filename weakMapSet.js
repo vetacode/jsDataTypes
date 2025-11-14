@@ -30,6 +30,7 @@ console.log(Array.from(map.keys())); //we can get the array
 console.log(Array.from(map.keys())[0]); //and we can get the object
 
 //WEAKMAP: the keys must be OBJECTs not Primitives (like in Map)
+//Fungsi utamanya adalah untuk additional data storage
 let weakMap = new WeakMap();
 let obj = {};
 let weakObj = weakMap.set(obj, 'ok'); // works fine (object key)
@@ -56,3 +57,18 @@ weakMap.get(key)
 weakMap.delete(key)
 weakMap.has(key)
  */
+
+//Example of user that visit the web with usersCount function
+
+let visitsCountMap = new WeakMap();
+
+function usersCount(user) {
+  let count = visitsCountMap.get(user) || 0;
+  return visitsCountMap.set(user, count + 1);
+}
+
+let goh = { name: 'John Goh' };
+console.log(usersCount(goh));
+
+goh = null;
+console.log(visitsCountMap);
