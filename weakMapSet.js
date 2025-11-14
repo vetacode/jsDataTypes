@@ -77,3 +77,36 @@ console.log(visitsCountMap); // WeakMap {}. Value nya sama kaya pake Map dengan 
 console.log(visitsCountMap.size); //undefined. isinya tetep ga bisa kedetect juga
 goh = null;
 console.log(visitsCountMap.size); //Object removed from WeakMap
+
+/**
+ * WEAKSET
+WeakSet behaves similarly:
+
+It is analogous to Set, but we may only add objects to WeakSet (not primitives).
+An object exists in the set while it is reachable from somewhere else.
+Like Set, it supports add, has and delete, but not size, keys() and no iterations.
+ */
+
+let visitedSet = new WeakSet();
+
+let jong = { name: 'Jong' };
+let pete = { name: 'Pete' };
+let mary = { name: 'Mary' };
+
+visitedSet.add(jong); // Jong visited us
+visitedSet.add(pete); // Then Pete
+visitedSet.add(jong); // Jong again
+
+// visitedSet has 2 users now
+
+// check if Jong visited?
+console.log(visitedSet.has(jong)); // true
+
+// check if Mary visited?
+console.log(visitedSet.has(mary)); // false
+
+console.log(visitedSet);
+
+jong = null;
+
+// visitedSet will be cleaned automatically
