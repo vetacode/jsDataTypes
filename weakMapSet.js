@@ -28,3 +28,31 @@ console.log(map); //but Map still has it
 console.log(map.keys());
 console.log(Array.from(map.keys())); //we can get the array
 console.log(Array.from(map.keys())[0]); //and we can get the object
+
+//WEAKMAP: the keys must be OBJECTs not Primitives (like in Map)
+let weakMap = new WeakMap();
+let obj = {};
+let weakObj = weakMap.set(obj, 'ok'); // works fine (object key)
+console.log(weakObj);
+// can't use a string as the key
+// weakMap.set("test", "Whoops"); // Error, because "test" is not an object
+
+let safir = { name: 'Safir' };
+
+let batu = new WeakMap();
+batu.set(safir, 'pelangi');
+console.log(batu);
+
+safir = null;
+console.log(safir); //original object removed from memory
+console.log(batu); //object also removed from WeakMap
+
+/**
+ * WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
+
+WeakMap has only the following methods:
+weakMap.set(key, value)
+weakMap.get(key)
+weakMap.delete(key)
+weakMap.has(key)
+ */
