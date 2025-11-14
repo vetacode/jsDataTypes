@@ -74,5 +74,6 @@ console.log(usersCount(goh));
 console.log(usersCount(goh));
 
 console.log(visitsCountMap); // WeakMap {}. Value nya sama kaya pake Map dengan object yang sudah di removed (null). this is expected & intended with using WeakMap  no value inside
+console.log(visitsCountMap.size); //undefined. isinya tetep ga bisa kedetect juga
 goh = null;
-console.log(visitsCountMap); //Object removed from WeakMap
+console.log(visitsCountMap.size); //Object removed from WeakMap
