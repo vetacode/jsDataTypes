@@ -136,22 +136,24 @@ let messages = [
   { text: 'See you soon', from: 'Alice' },
 ];
 
-let readMessages = new WeakSet();
+let readMessages = new Set(); //should use WeakSet
 
 function markAsRead(msg) {
   readMessages.add(msg);
 }
 
-function isRead(msg) {
-  return readMessages.has(msg);
-}
+// function isRead(msg) {
+//   return readMessages.has(msg);
+// }
+
+let isRead = (msg) => readMessages.has(msg);
 
 //mark messages as red
 markAsRead(messages[0]);
 markAsRead(messages[1]);
 console.log(readMessages.size);
 
-markAsRead(messages[0]);
+markAsRead(messages[0]); //will be ignored coz same value as above
 console.log(readMessages.size); //the messages size is still same
 
 console.log(
