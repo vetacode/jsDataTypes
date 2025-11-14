@@ -152,7 +152,7 @@ markAsRead(messages[1]);
 console.log(readMessages.size);
 
 markAsRead(messages[0]);
-console.log(readMessages.size); //the messaegs size is still same
+console.log(readMessages.size); //the messages size is still same
 
 console.log(
   `Message from ${messages[0].from} with text ${
@@ -186,7 +186,7 @@ let messages2 = [
   { text: 'See you soon', from: 'Alice' },
 ];
 
-let readMessage = new Map();
+let readMessage = new Map(); //Should use WeakMap. Using Map only for debugging the logs
 
 let date = new Date(2025, 1, 1);
 
@@ -196,8 +196,9 @@ console.log(readMessage);
 console.log(readMessage.keys()); //resulting Iterator{}. it can be looped but its not array so cannot use .map(), .length or .filter().
 
 console.log([...readMessage.keys()]); //so we use spread op with square bracket to make an array, then it can use arr method
+
 let arrRead = [...readMessage.keys()];
 console.log(arrRead[0]);
 console.log(arrRead.length);
 
-console.log(Array.from(readMessage));
+console.log(Array.from(readMessage.keys(), (key) => key.text)); //convert to array + mapping function to get the object props
