@@ -31,6 +31,7 @@ console.log(Array.from(map.keys())[0]); //and we can get the object
 
 //WEAKMAP: the keys must be OBJECTs not Primitives (like in Map)
 //Fungsi utamanya adalah untuk additional data storage
+//WeakMap never express the content inside
 let weakMap = new WeakMap();
 let obj = {};
 let weakObj = weakMap.set(obj, 'ok'); // works fine (object key)
@@ -59,16 +60,19 @@ weakMap.has(key)
  */
 
 //Example of user that visit the web with usersCount function
-
 let visitsCountMap = new WeakMap();
 
 function usersCount(user) {
   let count = visitsCountMap.get(user) || 0;
-  return visitsCountMap.set(user, count + 1);
+  visitsCountMap.set(user, count + 1);
+  return count + 1;
 }
 
 let goh = { name: 'John Goh' };
 console.log(usersCount(goh));
+console.log(usersCount(goh));
+console.log(usersCount(goh));
 
+console.log(visitsCountMap); // WeakMap {}. Value nya sama kaya pake Map dengan object yang sudah di removed (null). this is expected & intended with using WeakMap  no value inside
 goh = null;
-console.log(visitsCountMap);
+console.log(visitsCountMap); //Object removed from WeakMap
