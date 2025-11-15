@@ -129,9 +129,10 @@ P.S. Ignore symbolic properties, count only “regular” ones.
 let user2 = {
   name: 'John',
   age: 30,
+  isAdmin: false,
 };
 
 function count(obj) {
-  return Object.keys(obj).length;
+  return Object.entries(obj).length;
 }
-console.log(count(user2)); // 2
+console.log(count(user2)); // 3
