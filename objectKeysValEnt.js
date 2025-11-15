@@ -103,4 +103,10 @@ function sumSalaries(salaries) {
 }
 console.log(sumSalaries(salaries));
 
-//
+//alternative using reduce
+function sumSalaries2(salaries) {
+  let arrSalary = Object.values(salaries);
+  let sum = arrSalary.reduce((a, b) => a + b, 0);
+  return sum;
+}
+console.log(sumSalaries2(salaries));
