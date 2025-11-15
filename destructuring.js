@@ -89,3 +89,10 @@ let strings = 'strings';
 for (let [key, value] of strings) {
   console.log(`${key}: ${value}`);
 }
+
+//Swap variables trick
+let guest = 'May';
+let admin = 'Jane';
+
+[guest, admin] = [admin, guest];
+console.log(`${guest} ${admin}`);
