@@ -71,3 +71,21 @@ let user = {
 for (let [key, value] of Object.entries(user)) {
   console.log(`${key}: ${value}`);
 }
+
+//Looping Map
+let map = new Map();
+
+map.set(1, 'satu');
+map.set('2', 'dua');
+map.set('3', 3);
+
+map;
+
+for (let [key, value] of map) {
+  console.log(`${key}: ${value}`);
+}
+
+let strings = 'strings';
+for (let [key, value] of strings) {
+  console.log(`${key}: ${value}`);
+}
