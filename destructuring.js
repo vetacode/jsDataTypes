@@ -50,3 +50,14 @@ let [satu, _, tiga] = new Map([
 console.log(satu);
 console.log(_);
 console.log(tiga);
+
+//Working on assigning object to the left-side
+let person = {};
+
+[person.name, person.age] = 'John 30'.split(' ');
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+
+person.isAdmin = false;
+console.log(person);
