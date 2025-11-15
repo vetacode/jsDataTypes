@@ -61,3 +61,13 @@ console.log(person.age);
 
 person.isAdmin = false;
 console.log(person);
+
+//Looping with Object.entries(): looping over keys-values of an obj
+let user = {
+  name: 'Pandu',
+  age: 23,
+};
+
+for (let [key, value] of Object.entries(user)) {
+  console.log(`${key}: ${value}`);
+}
