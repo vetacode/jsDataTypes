@@ -84,3 +84,23 @@ let salaries = {
 
 alert( sumSalaries(salaries) ); // 650
  */
+
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+function sumSalaries(salaries) {
+  let arrSalary = Object.values(salaries);
+  console.log(arrSalary);
+
+  let sum = 0;
+  for (let sal of arrSalary) {
+    sum += sal;
+  }
+  return sum;
+}
+console.log(sumSalaries(salaries));
+
+//
