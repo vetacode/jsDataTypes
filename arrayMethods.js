@@ -26,7 +26,7 @@ console.log(newFruits);
 
 console.log(fruits.slice(-2)); //copy from -2 untill the end of arr
 
-//concat: creates new array + values from other array + additional items
+//CONCAT: creates new array + values from other array + additional items
 //syntax: arr.concat(arg1, arg2...)
 let arr = [1, 2];
 
@@ -55,7 +55,7 @@ let arrayLike2 = {
 
 console.log(arr.concat(arrayLike2)); // 1,2,something,else
 
-//Iterate forEach: arr.forEach
+//ITERATE forEach: arr.forEach
 //syntax: arr.forEach(function(item, index, array) { ... do something with an item })
 let harpot = ['Bilbo', 'Gandalf', 'Nazgul'];
 
@@ -181,10 +181,12 @@ let arr3 = names.split(', '); //delimiter adalah apa yg mau dihilangkan dari str
 console.log(names);
 console.log(arr3);
 console.log(arr3.length);
+console.log(arr3[4]);
 
 let arr4 = names.split(); //tanpa delimiter it will merged into 1 item
 console.log(arr4);
 console.log(arr4.length);
+console.log(arr4.join() === names);
 
 let arr5 = names.split(', ', 2); //it limits returned array length and ignore the rest
 console.log(arr5);
