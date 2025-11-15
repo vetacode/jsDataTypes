@@ -35,6 +35,8 @@ console.log(title); // Consul
 
 //Working also for ITERABLES
 let [a, b, c] = 'abc';
+let abc = 'abc';
+console.log(abc.split(''));
 console.log(a);
 console.log(b);
 console.log(c);
