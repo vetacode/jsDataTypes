@@ -174,3 +174,15 @@ let { rumah, tangga, ...pasangan } = naungan;
 
 console.log(pasangan.suami);
 console.log(pasangan.istri);
+
+//if there is no let on the left, then should use bracket
+let ranjang = {
+  kasur: 'sama',
+  bantal: 'ada',
+  guling: 'ada',
+  meja: 'ga ada',
+};
+
+let kasur, guling, meja, bantal;
+
+({ kasur, bantal, guling, meja } = ranjang);
