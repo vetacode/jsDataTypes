@@ -220,3 +220,28 @@ console.log(masuk_surga);
 console.log(type1);
 console.log(insinyur[0]);
 console.log(insinyur[1]);
+
+//SMART FUNCTION PARAMETERS
+let pilihan = {
+  makanan: {
+    ada: 'Bakso',
+    banyak: 'Mie Ayam',
+  },
+  isAda: 'ga ada',
+  snacks: ['ciki', 'coklat'],
+};
+
+function mauMakan({
+  judul = 'lapar',
+  tesate = 'sate',
+  isAda,
+  makanan: { ada, banyak },
+  snacks,
+}) {
+  [item1] = snacks;
+  console.log(
+    `ketika ${judul}, saya mau makan ${tesate} tapi malah ${isAda}. Terpaksa order ${ada} ${banyak}. Plus nyemil ${item1} dan ${snacks[1]} `
+  );
+}
+
+mauMakan(pilihan);
