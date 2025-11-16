@@ -234,9 +234,9 @@ let pilihan = {
 function mauMakan({
   judul = 'lapar',
   tesate = 'sate',
-  isAda,
-  makanan: { ada, banyak },
-  snacks,
+  makanan: { ada = 'nasi', banyak = 'rendang' } = {},
+  isAda = 'zonk',
+  snacks = ['krupuk', 'kripik'],
 }) {
   [item1] = snacks;
   console.log(
@@ -245,3 +245,4 @@ function mauMakan({
 }
 
 mauMakan(pilihan);
+mauMakan({});
