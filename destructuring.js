@@ -96,3 +96,12 @@ let admin = 'Jane';
 
 [guest, admin] = [admin, guest];
 console.log(`${guest} ${admin}`);
+
+//REST '...'
+let [num, word, ...rest] = ['satu', 'kata', 'apa', 'aja'];
+
+console.log(num);
+console.log(rest);
+console.log(rest[0]);
+console.log(rest[1]);
+console.log(rest.length);
