@@ -105,3 +105,6 @@ console.log(rest);
 console.log(rest[0]);
 console.log(rest[1]);
 console.log(rest.length);
+
+let [title1, title2, ...newTitles] = ['roman', 'jungle', 'viking', 'empire'];
+console.log(newTitles);
