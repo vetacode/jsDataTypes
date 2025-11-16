@@ -290,7 +290,7 @@ console.log(soldiers2);
 | `.map()`     | New array      | Array           | Transforms each element             |
 | `.filter()`  | New array      |                 | Keeps elements that match condition |
 | `.find()`    | Single element |                 | Returns the first that matches      |
-|  for.. of     | string         |                 | loops                               |
+|  for.. of    | string         |                 | loops                               |
 | .split       | Arrray         | Strings         |
 | .join        | Strings        | Array           |
 

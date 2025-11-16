@@ -274,14 +274,14 @@ alert( isAdmin ); // false
  */
 
 let user3 = {
-  name: 'John',
+  name2: 'John',
   years: 30,
 };
 
-let { name, years: age, isAdmin = false } = user3;
+let { name2, years: age2, isAdmin = false } = user3;
 
-console.log(name);
-console.log(age);
+console.log(name2);
+console.log(age2);
 console.log(isAdmin);
 
 /**TASK 2
@@ -308,5 +308,15 @@ let salaries = {
 };
 
 function topSalary(salaries) {
-  return ``;
+  let maxName = null;
+  let maxValue = 0;
+  for (let [name, salary] of Object.entries(salaries)) {
+    if (salary > maxValue) {
+      maxName = name;
+      maxValue = salary;
+    }
+  }
+  return maxName;
 }
+
+console.log(topSalary(salaries));
