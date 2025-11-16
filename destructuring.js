@@ -150,3 +150,14 @@ let { width: w, height: h, title3 } = options;
 console.log(title3); // Menu
 console.log(w); // 100
 console.log(h); // 200
+
+//combining the assignment with default values
+let options2 = {
+  title4: 'Menu',
+};
+
+let { width: w2 = 100, height: h2 = 200, title4 } = options2;
+
+console.log(title4); // Menu
+console.log(w2); // 100
+console.log(h2); // 200
