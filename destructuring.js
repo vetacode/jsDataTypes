@@ -186,3 +186,32 @@ let ranjang = {
 let kasur, guling, meja, bantal;
 
 ({ kasur, bantal, guling, meja } = ranjang);
+
+//NESTED DESTRUCTURING
+let profesi = {
+  dokter: {
+    umum: 'impian mayoritas',
+    hewan: 'mulia',
+  },
+  developer: ['frontEnd', 'backEnd'],
+  penjahat: {
+    maling: 'banyak',
+    jambret: 'lebih banyak',
+  },
+  isHard: false,
+};
+
+let {
+  dokter: { umum, hewan },
+  developer: [type1, type2],
+  success = 'belum tentu',
+  masuk_surga = 'apalagi',
+  penjahat,
+} = profesi;
+
+console.log(hewan);
+console.log(umum);
+console.log(success);
+console.log(umum);
+console.log(penjahat.maling);
+console.log(masuk_surga);
