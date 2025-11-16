@@ -28,7 +28,9 @@ new Date(2011, 0, 1); // the same, hours etc are 0 by default
 let date2 = new Date(2011, 0, 1, 2, 3, 4, 567);
 console.log(date2); // 1.01.2011, 02:03:04.567
 
-//ACCESS DATE COMPONENTS
+/**
+ * ACCESS DATE COMPONENTS
+
 getFullYear(); //4 digits
 getMonth(); //from 0 to 11
 getDate(); //from 1 to 31
@@ -37,3 +39,28 @@ getMinutes();
 getSeconds();
 getMilliseconds();
 getDay(); //from 0 (sunday) to 6 (saturday)
+getTime(); //number milliseconds passed from Jan 1st of 1970 UTC+0
+getTimezoneOffset(); //Returns the difference between UTC and the local time zone, in minutes:
+ */
+
+let date3 = new Date();
+console.log(date3.getHours()); //Getting current local hours
+console.log(date3.getTime().toLocaleString());
+console.log(date3.getTimezoneOffset() / 60); //hours difference
+
+/**SETTING DATE COMPONENTS
+ * setFullYear(year, [month], [date])
+setMonth(month, [date])
+setDate(date)
+setHours(hour, [min], [sec], [ms])
+setMinutes(min, [sec], [ms])
+setSeconds(sec, [ms])
+setMilliseconds(ms)
+setTime(milliseconds) (sets the whole date by milliseconds since 01.01.1970 UTC)
+ */
+
+let date4 = new Date();
+console.log(date4.setHours(0));
+console.log(date4);
+console.log(date4.setHours(0, 0, 0, 0));
+console.log(date4);
