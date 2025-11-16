@@ -114,6 +114,21 @@ let [namaDepan, namaBlkg] = [];
 console.log(namaDepan); // undefined
 console.log(namaBlkg); // undefined
 
-let [namaDepan2 = 'Amir', namaBlkg2 = 'Khan'] = [];
-console.log(namaDepan2);
-console.log(namaBlkg2);
+let [namaDepan2 = 'Amir', namaBlkg2 = 'Khan'] = ['Rumi'];
+console.log(namaDepan2); //diambil dari arr[0]
+console.log(namaBlkg2); //diambil dari default =
+
+//Object Desrtucturing
+//Syntax: let {var1,  var2} = {prop1:... , prop2:...}
+
+let users = {
+  name: 'Golang',
+  age: 15,
+  childNum: 2,
+};
+
+let { age, childNum, name, var2 } = users;
+console.log(name);
+console.log(var2);
+console.log(childNum);
+console.log(age);
