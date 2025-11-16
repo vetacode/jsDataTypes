@@ -161,3 +161,16 @@ let { width: w2 = 100, height: h2 = 200, title4 } = options2;
 console.log(title4); // Menu
 console.log(w2); // 100
 console.log(h2); // 200
+
+//REST pattern '...'
+let naungan = {
+  rumah: 1,
+  tangga: 2,
+  suami: 'ada',
+  istri: 'ada',
+};
+
+let { rumah, tangga, ...pasangan } = naungan;
+
+console.log(pasangan.suami);
+console.log(pasangan.istri);
