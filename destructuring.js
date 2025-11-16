@@ -198,12 +198,14 @@ let profesi = {
     maling: 'banyak',
     jambret: 'lebih banyak',
   },
+  insinyur: ['kantoran', 'lapangan'],
   isHard: false,
 };
 
 let {
   dokter: { umum, hewan },
   developer: [type1, type2],
+  insinyur,
   success = 'belum tentu',
   masuk_surga = 'apalagi',
   penjahat,
@@ -215,3 +217,6 @@ console.log(success);
 console.log(umum);
 console.log(penjahat.maling);
 console.log(masuk_surga);
+console.log(type1);
+console.log(insinyur[0]);
+console.log(insinyur[1]);
