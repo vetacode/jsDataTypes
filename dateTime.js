@@ -63,4 +63,20 @@ let date4 = new Date();
 console.log(date4.setHours(0));
 console.log(date4);
 console.log(date4.setHours(0, 0, 0, 0));
-console.log(date4);
+console.log(date4.toLocaleString());
+
+//AUTO-CORRECTION
+let date5 = new Date(2016, 1, 28);
+console.log(date5.setDate(date5.getDate() + 2));
+console.log(date5.toDateString());
+
+let date6 = new Date();
+date6.setSeconds(date6.getSeconds() + 70);
+console.log(date6.toLocaleString());
+
+let date7 = new Date(2016, 0, 2);
+
+date7.setDate(1);
+console.log(date7.toDateString());
+date7.setDate(0);
+console.log(date7.toDateString());
