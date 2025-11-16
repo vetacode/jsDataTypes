@@ -119,7 +119,7 @@ console.log(namaDepan2); //diambil dari arr[0]
 console.log(namaBlkg2); //diambil dari default =
 
 //Object Desrtucturing
-//Syntax: let {var1,  var2} = {prop1:... , prop2:...}
+//Basic Syntax: let {var1,  var2} = {var1:... , var2:...}
 
 let users = {
   name: 'Golang',
@@ -132,3 +132,21 @@ console.log(name);
 console.log(var2);
 console.log(childNum);
 console.log(age);
+
+//if we want to assign prop with different name:
+let options = {
+  title3: 'Menu',
+  width: 100,
+  height: 200,
+};
+
+// { sourceProperty: targetVariable }
+let { width: w, height: h, title3 } = options;
+
+// width -> w
+// height -> h
+// title -> title
+
+console.log(title3); // Menu
+console.log(w); // 100
+console.log(h); // 200
