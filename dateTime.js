@@ -1,20 +1,20 @@
 //Date Creation
 let now = new Date();
-console.log(now);
+console.log(now.toLocaleString());
 
 //new Date(milliseconds)
 let jan01_1970 = new Date(0);
-console.log(jan01_1970);
+console.log(jan01_1970.toDateString());
 let jan02_1970 = new Date(24 * 3600 * 1000);
-console.log(jan02_1970);
+console.log(jan02_1970.toDateString());
 
 // 31 Dec 1969
 let Dec31_1969 = new Date(-24 * 3600 * 1000);
-console.log(Dec31_1969);
+console.log(Dec31_1969.toDateString());
 
 //new Date(datestring)
 let date = new Date('2017-01-26');
-console.log(date);
+console.log(date.toString());
 // The time is not set, so it's assumed to be midnight GMT and
 // is adjusted according to the timezone the code is run in
 // So the result could be
@@ -26,7 +26,7 @@ console.log(date);
 new Date(2011, 0, 1, 0, 0, 0, 0); // 1 Jan 2011, 00:00:00
 new Date(2011, 0, 1); // the same, hours etc are 0 by default
 let date2 = new Date(2011, 0, 1, 2, 3, 4, 567);
-console.log(date2); // 1.01.2011, 02:03:04.567
+console.log(date2.toLocaleString()); // 1.01.2011, 02:03:04.567
 
 /**
  * ACCESS DATE COMPONENTS
