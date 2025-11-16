@@ -108,3 +108,12 @@ console.log(rest.length);
 
 let [title1, title2, ...newTitles] = ['roman', 'jungle', 'viking', 'empire'];
 console.log(newTitles);
+
+//Default Values
+let [namaDepan, namaBlkg] = [];
+console.log(namaDepan); // undefined
+console.log(namaBlkg); // undefined
+
+let [namaDepan2 = 'Amir', namaBlkg2 = 'Khan'] = [];
+console.log(namaDepan2);
+console.log(namaBlkg2);
