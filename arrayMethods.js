@@ -770,9 +770,9 @@ Please use array .reduce method in the solution.
  */
 
 let users5 = [
-  { id: 'john', name: 'John Smith', age: 20 },
-  { id: 'ann', name: 'Ann Smith', age: 24 },
-  { id: 'pete', name: 'Pete Peterson', age: 31 },
+  { id: 'juang', name: 'Juang Jaya', age: 20 },
+  { id: 'ani', name: 'Ani Samy', age: 24 },
+  { id: 'pandu', name: 'Pandu Wan', age: 31 },
 ];
 
 function groupById(arr) {
@@ -797,7 +797,7 @@ function groupById2(arr) {
   return res;
 }
 
-console.log(groupById2(users5));
+console.log(usersById);
 
 //other alternative: using Map to results non-string keys or better performance for frequent updates
 const map = new Map(users5.map((u) => [u.id, u]));
