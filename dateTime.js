@@ -191,3 +191,15 @@ The optional 'Z' part denotes the time zone in the format +-hh:mm. A single lett
 
 let date9 = new Date(Date.parse('2025-11-17T12:00:00.500-07:30'));
 console.log(date9);
+
+/**TASK 1
+ * Create a date
+importance: 5
+Create a Date object for the date: Feb 20, 2012, 3:12am. The time zone is local.
+Show it using log.
+ */
+
+let dates = new Date(2012, 1, 20, 3, 12);
+console.log(dates.toLocaleString());
+let dates2 = new Date('2012-02-20T03:12');
+console.log(dates2.toLocaleString());
