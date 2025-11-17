@@ -357,6 +357,14 @@ For instance, if now is 23:00, then:
 
 getSecondsToTomorrow() == 3600
 P.S. The function should work at any day, the “today” is not hardcoded.
-
-
  */
+
+function getSecondsToTomorrow() {
+  let d = new Date();
+  let totalSecondsToNow =
+    d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+  let totalSecondsDay = 24 * 3600;
+  return totalSecondsDay - totalSecondsToNow;
+}
+
+console.log(getSecondsToTomorrow());
