@@ -166,3 +166,37 @@ let userData =
 
 let users = JSON.parse(userData);
 console.log(users.friends[1]);
+
+//Using Reviver
+let schedule = `{
+  "meetups": [
+    {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+    {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+  ]
+}`;
+
+schedule = JSON.parse(schedule, function (key, value) {
+  if (key == 'date') return new Date(value);
+  return value;
+});
+
+console.log(schedule.meetups[1].date.getDate()); // works!
+
+/**TASK 1
+ * Turn the object into JSON and back
+importance: 5
+Turn the user into JSON and then read it back into another variable.
+
+let user = {
+  name: "John Smith",
+  age: 35
+};
+ */
+
+let user3 = {
+  name: 'John Smith',
+  age: 35,
+};
+
+let userObj = JSON.parse(JSON.stringify(user3));
+console.log(userObj);
