@@ -80,3 +80,10 @@ date7.setDate(1);
 console.log(date7.toDateString());
 date7.setDate(0);
 console.log(date7.toDateString());
+
+//rehearse
+let tanggal = new Date(2019, 0, 26);
+console.log(tanggal.toLocaleDateString());
+
+let tanggal2 = new Date();
+console.log(tanggal2.toLocaleString());
