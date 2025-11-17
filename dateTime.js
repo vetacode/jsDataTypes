@@ -51,7 +51,7 @@ console.log(date3.getTimezoneOffset() / 60); //hours difference
 /**SETTING DATE COMPONENTS: it MUTATES the Date Object
  * setFullYear(year, [month], [date])
 setMonth(month, [date])
-setDate(date)
+setDate(date) : return ms since 01.01.1970 UTC
 setHours(hour, [min], [sec], [ms])
 setMinutes(min, [sec], [ms])
 setSeconds(sec, [ms])
@@ -69,6 +69,7 @@ console.log(date4.toLocaleString());
 let date5 = new Date(2016, 1, 28);
 console.log(date5.toDateString());
 console.log(date5.setDate(date5.getDate() + 2));
+console.log(date5.getDate()); //ambil angka date nya yg sdh berubah
 console.log(date5.toDateString());
 
 let date6 = new Date();
@@ -277,11 +278,17 @@ P.S. The function should not modify the given date.
  */
 
 function getDateAgo(date, days) {
-  let dates = date.setDate(date.getDate() - days);
-  console.log(dates);
-  console.log(date.getDate());
+  let dateCopy = new Date(date);
+  console.log(dateCopy.toDateString());
 
-  return date.getDate();
+  let dates = dateCopy.setDate(dateCopy.getDate() - days);
+  console.log(dates);
+  console.log(dateCopy.getDate());
+
+  let dCopy = dateCopy.getDate();
+  let newDateCopy = new Date(dateCopy);
+
+  return `${dCopy}, (${newDateCopy.toDateString()})`;
 }
 
 let dates5 = new Date(2015, 0, 2);
