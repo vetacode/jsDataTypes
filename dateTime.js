@@ -48,7 +48,7 @@ console.log(date3.getHours()); //Getting current local hours
 console.log(date3.getTime().toLocaleString());
 console.log(date3.getTimezoneOffset() / 60); //hours difference
 
-/**SETTING DATE COMPONENTS
+/**SETTING DATE COMPONENTS: it MUTATES the Date Object
  * setFullYear(year, [month], [date])
 setMonth(month, [date])
 setDate(date)
@@ -87,9 +87,25 @@ console.log(tanggal.toLocaleDateString());
 
 let tanggal2 = new Date();
 console.log(tanggal2.toLocaleString());
-
 console.log(tanggal2.getDate());
-console.log(tanggal2.setFullYear(2025, 0, 17));
+console.log(tanggal2.setFullYear(2025, 10, 17));
+console.log(tanggal2.toLocaleString());
 console.log(tanggal2.setDate(17));
 
 //DATE TO NUMBER, DATE DIFF
+let date8 = new Date();
+console.log(+date8); //the result is same as .getTime()
+console.log(date8.getTime());
+console.log(date8.toDateString());
+
+//It can be used for time measurement
+let start = new Date();
+console.log(start.toLocaleString());
+for (let i = 0; i < 100000; i++) {
+  let doIt = i * i * i;
+}
+let end = new Date();
+console.log(end.toLocaleString());
+let gap = end - tanggal2;
+console.log(tanggal2.toLocaleString());
+console.log(`${gap.toLocaleString()} ms`);
