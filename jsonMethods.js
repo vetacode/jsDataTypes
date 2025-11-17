@@ -94,3 +94,36 @@ place:        [object Object]
 number:       23
 occupiedBy: [object Object]
 */
+
+//FORMATTING: Space
+let user2 = {
+  name: 'John',
+  age: 25,
+  roles: {
+    isAdmin: false,
+    isEditor: true,
+  },
+};
+
+console.log(JSON.stringify(user2, null, 2));
+/* two-space indents:
+{
+  "name": "John",
+  "age": 25,
+  "roles": {
+    "isAdmin": false,
+    "isEditor": true
+  }
+}
+*/
+
+/* for JSON.stringify(user, null, 4) the result would be more indented:
+{
+    "name": "John",
+    "age": 25,
+    "roles": {
+        "isAdmin": false,
+        "isEditor": true
+    }
+}
+*/
