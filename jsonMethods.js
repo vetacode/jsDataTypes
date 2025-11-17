@@ -150,3 +150,19 @@ console.log(JSON.stringify(meetup2));
     "room": 23
   }
 */
+
+//JSON.parse: to decode JSON-string
+//Syntax: let value = JSON.parse(str[, reviver])
+//reviver is optional function(key,value) and will be called for each (key, value) pair: transform the value
+// stringified array
+let numbers = '[0, 1, 2, 3]';
+
+numbers = JSON.parse(numbers);
+console.log(numbers[1]); // 1
+
+//ON the nested object
+let userData =
+  '{"name": "Amy", "age": 28, "isAdmin": true, "friends": [0,1,2,3]}';
+
+let users = JSON.parse(userData);
+console.log(users.friends[1]);
