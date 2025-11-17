@@ -109,3 +109,17 @@ console.log(end.toLocaleString());
 let gap = end - tanggal2;
 console.log(tanggal2.toLocaleString());
 console.log(`${gap.toLocaleString()} ms`);
+
+//DATE.NOW(): return current timestamp
+// its same as new Date().getTime() but faster coz no need create intermediate Date obj & no pressure on garbage collection
+
+let current = Date.now();
+console.log(current.toLocaleString());
+
+for (let i = 0; i < 100000; i++) {
+  let doing = i * i * i;
+}
+
+let ending = Date.now();
+console.log(ending.toLocaleString());
+console.log(`${ending - current} ms`); //results is faster around 1-3ms
