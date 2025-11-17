@@ -203,3 +203,24 @@ let dates = new Date(2012, 1, 20, 3, 12);
 console.log(dates.toLocaleString());
 let dates2 = new Date('2012-02-20T03:12');
 console.log(dates2.toLocaleString());
+
+/**TASK 2
+ * Show a weekday
+importance: 5
+Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’.
+
+For instance:
+
+let date = new Date(2012, 0, 3);  // 3 Jan 2012
+alert( getWeekDay(date) );        // should output "TU"
+ */
+
+function getWeekDay(date) {
+  console.log(date);
+  let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+  return days[date.getDay()];
+}
+
+let dates3 = new Date(2012, 0, 3);
+
+console.log(getWeekDay(dates3));
