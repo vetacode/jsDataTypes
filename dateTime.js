@@ -87,3 +87,9 @@ console.log(tanggal.toLocaleDateString());
 
 let tanggal2 = new Date();
 console.log(tanggal2.toLocaleString());
+
+console.log(tanggal2.getDate());
+console.log(tanggal2.setFullYear(2025, 0, 17));
+console.log(tanggal2.setDate(17));
+
+//DATE TO NUMBER, DATE DIFF
