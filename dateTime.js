@@ -339,3 +339,24 @@ function getSecondsToday() {
   return Math.round((now - today) / 1000);
 }
 console.log(getSecondsToday()); //== 36000. (3600 * 10)
+
+//Alternative
+function getSecondsToday2() {
+  let d = new Date();
+  let getSeconds = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+  return getSeconds;
+}
+console.log(getSecondsToday2());
+
+/**TASK 7
+ * How many seconds till tomorrow?
+importance: 5
+Create a function getSecondsToTomorrow() that returns the number of seconds till tomorrow.
+
+For instance, if now is 23:00, then:
+
+getSecondsToTomorrow() == 3600
+P.S. The function should work at any day, the “today” is not hardcoded.
+
+
+ */
