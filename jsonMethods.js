@@ -3,6 +3,10 @@ JSON.stringify to convert objects into JSON.
 JSON.parse to convert JSON back into an object.
  */
 
+//STRINGIFY
+//Syntax: let json = JSON.stringify(value[, replacer, space])
+//replacer is array of properties to mapping function(key, value)
+
 let student = {
   name: 'John',
   age: 30,
@@ -23,5 +27,49 @@ console.log(json);
   "isAdmin": false,
   "courses": ["html", "css", "js"],
   "spouse": null
+}
+*/
+
+// a number in JSON is just a number
+console.log(JSON.stringify(1)); // 1
+// a string in JSON is still a string, but double-quoted
+console.log(JSON.stringify('test')); // "test"
+console.log(JSON.stringify(true)); // true
+console.log(JSON.stringify([1, 2, 3])); // [1,2,3]
+
+//IGNORED
+let user = {
+  sayHi() {
+    // ignored
+    console.log('Hello');
+  },
+  [Symbol('id')]: 123, // ignored
+  something: undefined, // ignored
+};
+console.log(JSON.stringify(user)); // {} (empty object)
+
+//use full syntax
+let room = {
+  number: 23,
+};
+
+let meetup = {
+  title: 'Conference',
+  participants: [{ name: 'John' }, { name: 'Alice' }],
+  place: room, // meetup references room
+};
+
+room.occupiedBy = meetup; // room references meetup ==> circular references will be ignored
+
+// console.log(JSON.stringify(meetup)); //error converting circular structure to JSON
+
+console.log(
+  JSON.stringify(meetup, ['title', 'participants', 'place', 'name', 'number'])
+);
+/*
+{
+  "title":"Conference",
+  "participants":[{"name":"John"},{"name":"Alice"}],
+  "place":{"number":23}
 }
 */
