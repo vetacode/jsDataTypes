@@ -122,11 +122,32 @@ for (let i = 0; i < 100000; i++) {
 
 let ending = Date.now();
 console.log(ending.toLocaleString());
-console.log(`${ending - current} ms`); //results is faster around 1-3ms
+console.log(`${ending - current} ms`); //results is faster around 1-7ms
 
 //BENCHMARKING
 //Using .getTime() is much faster coz no type conversion
 
+function diffSubtract2(date1, date2) {
+  return date2 - date1;
+}
+
+function diffGetTime2(date1, date2) {
+  return date2.getTime() - date1.getTime();
+}
+
+function bench2(f) {
+  let date1 = new Date(0);
+  let date2 = new Date();
+
+  let start = Date.now();
+  for (let i = 0; i < 100000; i++) f(date1, date2);
+  return Date.now() - start;
+}
+
+console.log('Time of diffSubtract: ' + bench2(diffSubtract2) + 'ms');
+console.log('Time of diffGetTime: ' + bench2(diffGetTime2) + 'ms');
+
+//execute several times
 function diffSubtract(date1, date2) {
   return date2 - date1;
 }
@@ -144,5 +165,29 @@ function bench(f) {
   return Date.now() - start;
 }
 
-console.log('Time of diffSubtract: ' + bench(diffSubtract) + 'ms');
-console.log('Time of diffGetTime: ' + bench(diffGetTime) + 'ms');
+// added for "heating up" prior to the main loop
+bench(diffSubtract);
+bench(diffGetTime);
+
+let time1 = 0;
+let time2 = 0;
+
+for (let i = 0; i < 10; i++) {
+  time1 += bench(diffSubtract);
+  time2 += bench(diffGetTime);
+}
+console.log('Total time for diffSubtract: ' + time1);
+console.log('Total time for diffGetTime: ' + time2);
+
+//DATE.PARSE() from STRING
+/**
+ * The string format should be: YYYY-MM-DDTHH:mm:ss.sssZ, where:
+
+YYYY-MM-DD – is the date: year-month-day.
+The character "T" is used as the delimiter.
+HH:mm:ss.sss – is the time: hours, minutes, seconds and milliseconds.
+The optional 'Z' part denotes the time zone in the format +-hh:mm. A single letter Z would mean UTC+0.
+ */
+
+let date9 = new Date(Date.parse('2025-11-17T12:00:00.500-07:30'));
+console.log(date9);
