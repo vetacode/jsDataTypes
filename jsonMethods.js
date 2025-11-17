@@ -127,3 +127,26 @@ console.log(JSON.stringify(user2, null, 2));
     }
 }
 */
+
+//CUSTOM toJSON
+let room2 = {
+  number: 23,
+  toJSON() {
+    return this.number;
+  },
+};
+
+let meetup2 = {
+  title: 'Conference',
+  room2,
+};
+
+console.log(JSON.stringify(room2)); // 23
+
+console.log(JSON.stringify(meetup2));
+/*
+  {
+    "title":"Conference",
+    "room": 23
+  }
+*/
