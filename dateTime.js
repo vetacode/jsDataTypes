@@ -235,9 +235,25 @@ alert( getLocalDay(date) );       // tuesday, should show 2
 function getLocalDay(date) {
   let days = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
   let dayNum = date.getDay();
+  console.log(dayNum);
+  if (dayNum == 0) {
+    dayNum = 7;
+  }
   let day = days[dayNum - 1];
   return `today is ${day}, should show ${dayNum}`;
 }
 
-let dates4 = new Date(2012, 0, 3); // 3 Jan 2012
+let dates4 = new Date(2012, 0, 1); // 3 Jan 2012
 console.log(getLocalDay(dates4)); // tuesday, should show 2
+
+//alternative
+function getLocalDay2(date) {
+  let day = date.getDay();
+  console.log(day);
+  if (day == 0) {
+    // weekday 0 (sunday) is 7 in european
+    day = 7;
+  }
+  return day;
+}
+console.log(getLocalDay2(dates4)); // tuesday, should show 2
