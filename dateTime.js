@@ -220,7 +220,24 @@ function getWeekDay(date) {
   let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
   return days[date.getDay()];
 }
-
 let dates3 = new Date(2012, 0, 3);
-
 console.log(getWeekDay(dates3));
+
+/**TASK 3
+ * European weekday
+importance: 5
+European countries have days of week starting with Monday (number 1), then Tuesday (number 2) and till Sunday (number 7). Write a function getLocalDay(date) that returns the “European” day of week for date.
+
+let date = new Date(2012, 0, 3);  // 3 Jan 2012
+alert( getLocalDay(date) );       // tuesday, should show 2
+ */
+
+function getLocalDay(date) {
+  let days = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+  let dayNum = date.getDay();
+  let day = days[dayNum - 1];
+  return `today is ${day}, should show ${dayNum}`;
+}
+
+let dates4 = new Date(2012, 0, 3); // 3 Jan 2012
+console.log(getLocalDay(dates4)); // tuesday, should show 2
