@@ -296,3 +296,25 @@ let dates5 = new Date(2015, 0, 2);
 console.log(getDateAgo(dates5, 1)); // 1, (1 Jan 2015)
 console.log(getDateAgo(dates5, 2)); // 31, (31 Dec 2014)
 console.log(getDateAgo(dates5, 365)); // 2, (2 Jan 2014)
+
+/**TASK 5
+ * Last day of month?
+importance: 5
+Write a function getLastDayOfMonth(year, month) that returns the last day of month. Sometimes it is 30th, 31st or even 28/29th for Feb.
+
+Parameters:
+
+year – four-digits year, for instance 2012.
+month – month, from 0 to 11.
+For instance, getLastDayOfMonth(2012, 1) = 29 (leap year, Feb).
+ */
+
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  console.log(date.toDateString());
+  let lastDate = date.getDate();
+  return lastDate;
+}
+console.log(getLastDayOfMonth(2012, 0)); // 31 (Jan)
+console.log(getLastDayOfMonth(2012, 1)); // 29 (leap year, Feb)
+console.log(getLastDayOfMonth(2013, 1)); // 28 (Feb)
