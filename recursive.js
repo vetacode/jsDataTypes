@@ -235,6 +235,18 @@ P.S. Hint: n! can be written as n * (n-1)! For instance: 3! = 3*2! = 3*2*1! = 6
  */
 
 function factorial(n) {
-  return n === 1 ? 1 : n * factorial(n - 1);
+  if (n < 0 || !Number.isInteger(n)) {
+    throw new Error(`Error: put only non negative values`);
+  }
+  return n <= 1 ? 1 : n * factorial(n - 1);
 }
-console.log(factorial(5));
+console.log(factorial(0));
+
+//alternative
+function factorial2(n) {
+  if (n < 0 || !Number.isInteger(n)) {
+    throw new Error(`Error: put only non negative values`);
+  }
+  return n ? n * factorial2(n - 1) : 1;
+}
+console.log(factorial2(0));
