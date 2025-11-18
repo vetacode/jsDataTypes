@@ -203,10 +203,12 @@ console.log(sumTo(100));
 
 //Using recursion
 function sumToRec(n) {
-  if (n === 0) {
-    return 0;
-  }
-  return n + sumToRec(n - 1);
+  return n === 1 ? 1 : n + sumToRec(n - 1);
 }
-
 console.log(sumToRec(100));
+
+//Using arithmetic progression formula
+function sumToProg(n) {
+  return (n * (n + 1)) / 2;
+}
+console.log(sumToProg(100));
