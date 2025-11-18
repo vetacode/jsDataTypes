@@ -372,7 +372,7 @@ function printListRev(list) {
     arr.push(i.value);
     i = i.next;
   }
-
+  console.log(arr); //[1, 2, 3, 4]
   for (let i = arr.length - 1; i >= 0; i--) {
     console.log(arr[i]); // 4, 3, 2, 1
   }
@@ -388,5 +388,37 @@ function printListRecRev(list) {
   }
   console.log(list.value); // 4, 3, 2, 1
 }
-
 printListRecRev(lists);
+
+//Extra: Best performance with Time complexity O(n), Space complexity O(1)
+
+function printListReverseFast(list) {
+  // Step 1: reverse the list in-place
+  let prev = null;
+  let current = list;
+  while (current) {
+    let next = current.next;
+    current.next = prev; // reverse pointer
+    prev = current;
+    current = next;
+  }
+
+  // Step 2: print the reversed list
+  let head = prev; // prev is now the last node (new head)
+  while (head) {
+    console.log(head.value); // 4, 3, 2, 1
+    head = head.next;
+  }
+
+  // Step 3: restore the list back to original
+  current = prev;
+  prev = null;
+  while (current) {
+    let next = current.next;
+    current.next = prev; // reverse again to restore
+    prev = current;
+    current = next;
+  }
+}
+
+printListReverseFast(lists);
