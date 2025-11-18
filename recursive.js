@@ -40,11 +40,15 @@ function fastPow(x, n) {
 }
 console.log(fastPow(2, 3));
 
+/**
+ * 4 * 1...
+ * 2 * 4... = 8
+ */
+
 /**SUMAMRY
 | Method                         | Time Complexity | Space Complexity | Notes                  |
 | ------------------------------ | --------------- | ---------------- | ---------------------- |
 | Iterative `pow`                | **O(n)**        | O(1)             | Slow for large n       |
 | Recursive simple               | **O(n)**        | O(n)             | Even worse stack usage |
 | **FastPow (By Squaring)**      | **O(log n)**    | O(log n)         | Fastest possible       |
-
  */
