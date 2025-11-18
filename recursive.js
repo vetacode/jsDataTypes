@@ -85,3 +85,57 @@ function sumSalaries(department) {
 }
 
 console.log(sumSalaries(company)); // 7700
+
+let perusahaan = {
+  sales: [
+    {
+      name: 'Rika',
+      salary: 10000,
+    },
+    {
+      name: 'Wully',
+      salary: 8000,
+    },
+  ],
+
+  tech: {
+    frontEnd: [
+      {
+        name: 'Fiqrie',
+        salary: 30000,
+      },
+      {
+        name: 'Rahman',
+        salary: 20000,
+      },
+    ],
+    backEnd: [
+      {
+        name: 'Rian',
+        salary: 10000,
+      },
+      {
+        name: 'Rengga',
+        salary: 5000,
+      },
+    ],
+  },
+};
+
+function totalSalaries(dep) {
+  let arr = Array.isArray(dep);
+  console.log(arr);
+  if (arr) {
+    return dep.reduce((prev, curr) => prev + curr.salary, 0);
+  } else {
+    let sum = 0;
+    let values = Object.values(dep);
+    console.log(values);
+    for (let subdep of values) {
+      sum += totalSalaries(subdep);
+    }
+    return sum.toString({ style: 'currency', currency: 'USD' });
+  }
+}
+
+console.log(totalSalaries(perusahaan));
