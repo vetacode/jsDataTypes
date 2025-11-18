@@ -18,3 +18,9 @@ function recursPow(x, n) {
   return x;
 }
 console.log(recursPow(2, 3));
+
+//Lean Code
+function recursPowBest(x, n) {
+  return n == 1 ? x : (x *= pow(x, n - 1));
+}
+console.log(recursPowBest(2, 3));
