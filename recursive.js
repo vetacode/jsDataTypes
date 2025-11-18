@@ -281,3 +281,21 @@ function fib(n) {
 console.log(fib(3));
 console.log(fib(7));
 console.log(fib(10));
+// console.log(fib(77)); will be extremly slow
+
+//SOLUTION Use for loop
+function fibFast(n) {
+  let a = 1;
+  let b = 1;
+
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+
+console.log(fibFast(3));
+console.log(fibFast(7));
+console.log(fibFast(77)); //fast results
