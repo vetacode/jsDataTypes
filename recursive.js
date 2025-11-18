@@ -126,16 +126,27 @@ function totalSalaries(dep) {
   let arr = Array.isArray(dep);
   console.log(arr);
   if (arr) {
-    return dep.reduce((prev, curr) => prev + curr.salary, 0);
+    //base case
+    return dep.reduce((prev, curr) => prev + curr.salary || 0, 0);
   } else {
+    //recursive
     let sum = 0;
     let values = Object.values(dep);
     console.log(values);
     for (let subdep of values) {
       sum += totalSalaries(subdep);
     }
-    return sum.toString({ style: 'currency', currency: 'USD' });
+    return sum;
   }
 }
 
-console.log(totalSalaries(perusahaan));
+function formatUSD(num) {
+  return Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(num);
+}
+
+let totalUSD = totalSalaries(perusahaan);
+
+console.log(formatUSD(totalUSD)); //83000
