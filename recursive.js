@@ -191,3 +191,14 @@ P.S. Which solution variant is the fastest? The slowest? Why?
 
 P.P.S. Can we use recursion to count sumTo(100000)?
  */
+//Using for loop
+function sumTo(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sumTo(100));
+
+//Using
