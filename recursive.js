@@ -355,3 +355,38 @@ function printListRec(list) {
   }
 }
 printListRec(lists);
+
+/**TASK 5
+ * Output a single-linked list in the reverse order
+importance: 5
+Output a single-linked list from the previous task Output a single-linked list in the reverse order.
+
+Make two solutions: using a loop and using a recursion.
+ */
+
+//Using loop
+function printListRev(list) {
+  let i = list;
+  let arr = [];
+  while (i) {
+    arr.push(i.value);
+    i = i.next;
+  }
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr[i]); // 4, 3, 2, 1
+  }
+}
+
+printListRev(lists);
+
+//Using recursion
+function printListRecRev(list) {
+  if (!list) return;
+  if (list.next) {
+    printListRecRev(list.next);
+  }
+  console.log(list.value); // 4, 3, 2, 1
+}
+
+printListRecRev(lists);
