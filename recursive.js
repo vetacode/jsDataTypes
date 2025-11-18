@@ -339,11 +339,19 @@ let lists = {
   },
 };
 function printList(list) {
-  let pre = list;
-  while (pre) {
-    console.log(pre.value);
-    pre = pre.next;
+  let i = list;
+  while (i) {
+    console.log(i.value);
+    i = i.next;
   }
 }
-
 printList(lists);
+
+//Using recursion
+function printListRec(list) {
+  console.log(list.value);
+  if (list.next) {
+    printListRec(list.next);
+  }
+}
+printListRec(lists);
