@@ -299,3 +299,51 @@ function fibFast(n) {
 console.log(fibFast(3));
 console.log(fibFast(7));
 console.log(fibFast(77)); //fast results
+
+/**TASK 4
+ * Output a single-linked list
+importance: 5
+Let’s say we have a single-linked list (as described in the chapter Recursion and stack):
+
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+Write a function printList(list) that outputs list items one-by-one.
+
+Make two variants of the solution: using a loop and using recursion.
+
+What’s better: with recursion or without it?
+ */
+//Using loop
+let lists = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+function printList(list) {
+  let pre = list;
+  while (pre) {
+    console.log(pre.value);
+    pre = pre.next;
+  }
+}
+
+printList(lists);
