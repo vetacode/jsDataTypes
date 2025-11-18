@@ -201,4 +201,12 @@ function sumTo(n) {
 }
 console.log(sumTo(100));
 
-//Using
+//Using recursion
+function sumToRec(n) {
+  if (n === 0) {
+    return 0;
+  }
+  return n + sumToRec(n - 1);
+}
+
+console.log(sumToRec(100));
