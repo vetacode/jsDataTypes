@@ -10,3 +10,18 @@ function pow(x, n) {
 console.log(pow(2, 3));
 
 //2. Pake Recursive
+function recursPow(x, n) {
+  if (n == 1) {
+    return x;
+  }
+  x *= pow(x, n - 1);
+  return x;
+}
+console.log(recursPow(2, 3));
+
+//Lean Code
+function recursPowBest(x, n) {
+  return n == 1 ? x : (x *= pow(x, n - 1));
+}
+
+console.log(recursPowBest(2, 3));
