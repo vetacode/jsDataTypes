@@ -1,5 +1,6 @@
 //syntax creating empty array:
 let arr = new Array();
+console.log(Array.prototype === arr.__proto__);
 let arr2 = [];
 
 let fruits = ['Apple', 'Orange', 'Plum'];
@@ -9,10 +10,10 @@ console.log(fruits[1]); // Orange
 console.log(fruits[2]); // Plum
 
 fruits[2] = 'Pear'; // now ["Apple", "Orange", "Pear"]
-
-console.log(fruits.length); // 3
-
-console.log(fruits); // Apple,Orange,Plum
+console.log(fruits);
+fruits[3] = 'Jambu';
+console.log(fruits.length); // 4
+console.log(fruits); // Apple,Orange,Pear,Jambu
 
 // mix of values
 let arr3 = [
