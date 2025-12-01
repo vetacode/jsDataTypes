@@ -27,6 +27,7 @@ console.log(newFruits);
 console.log(fruits.slice(-2)); //copy from -2 untill the end of arr
 
 //CONCAT: creates new array + values from other array + additional items
+//Create new array, NO MUTATE original arr
 //syntax: arr.concat(arg1, arg2...)
 let arr = [1, 2];
 
@@ -38,6 +39,7 @@ console.log(arr.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
 
 // create an array from: arr and [3,4], then add values 5 and 6
 console.log(arr.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
+console.log(arr);
 
 let arrayLike = {
   0: 'something',
@@ -279,7 +281,7 @@ console.log(soldiers2);
 | .split       | No             | convert string to array & split, create a copy   |
 | .slice       | No             | get copy of the range of targeted index of arr    |
 | .push        | No             | add string to the last index of arr, convert string to arr of strings  | 
-| 
+| .concat      | No             | add new elements to arr
 
 */
 
